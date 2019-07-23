@@ -1,0 +1,61 @@
+// Styling for the calltoaction1 section
+#callToAction1 {
+  background-color: $primary-100;
+}
+
+// Styling for the calltoaction2 section
+#callToAction2 {
+  background-color: $primary-200;
+}
+
+// Styling for the calltoaction3 section
+#callToAction3 {
+  .wt-block-formLeft {
+    display: flex;
+    height: 300px;
+    background-color: #cccccc;
+    img {
+      align-self: center;
+      margin: auto;
+    }
+  }
+  .wt-block-formRight {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 40px;
+  }
+}
+
+// Styling for the calltoaction4 section
+#callToAction4 {
+  background-color: $primary-200;
+  .wt-block-formCenter {
+    background-color: #fff;
+    padding: 40px 40px 50px;
+    width: 100%;
+    max-width: 550px;
+    border-radius: 3px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 991px) {
+  #callToAction1 form{
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 992px) {
+  #callToAction3 {
+    .wt-block-formLeft {
+      height: 500px;
+    }
+    .wt-block-formRight {
+      max-width: 410px;
+      padding: 40px 0;
+    }
+  }
+  #callToAction4 .wt-block-formCenter {
+    padding: 40px 80px 50px;
+  }
+}

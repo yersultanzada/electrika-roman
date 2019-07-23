@@ -1,0 +1,106 @@
+// Styling for the footer
+section#footer {
+  background-color: $primary-200;
+  padding-bottom: 30px;
+  .wt-section-text {
+    color: lighten($primary, 40%);
+  }
+  a.nav-link {
+    color: #fff;
+    padding: .2rem 1rem;
+  }
+  .list-inline-item a {
+    background-color: $primary;
+    color: $primary-200
+  }
+  form .btn-primary {
+    background-color: lighten($primary, 8%);
+    color: $primary-200 !important;
+  }
+  .wt-border-top {
+    border-top: 1px solid #fff;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .wt-section-small-text {
+    margin-bottom: 0;
+    padding-top: 15px;
+    color: lighten($primary, 50%);
+  }
+}
+@media (max-width: 767px) {
+  section#footer a.nav-link {
+    padding: .5rem 1rem;
+  }
+  section#footer .wt-border-top .text-right {
+    text-align: left !important;
+  }
+}
+
+// Styling for the footer 2
+section#footer2 {
+  .wt-section-desc {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  ul.nav {
+    justify-content: center;
+    a.nav-link {
+      padding: .2rem 1rem;
+    }
+  }
+  .wt-footer-rights .wt-section-small-text {
+    display: inline-block;
+  }
+}
+@media (max-width: 767px) {
+  section#footer2 {
+    .wt-section-desc {
+      max-width: 100%;
+    }
+    ul.nav {
+      display: block;
+      a.nav-link {
+        padding: .5rem 1rem;
+      }
+    }
+  }
+}
+
+// Styling for the footer 3
+section#footer3 {
+  background-color: $primary-200;
+  padding-bottom: 30px;
+  ul.nav {
+    float: right;
+    a.nav-link {
+      color: #fff;
+      padding: .5rem 1rem;
+    }
+  }
+  .wt-border-top {
+    border-top: 1px solid #fff;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .wt-section-small-text {
+    margin-bottom: 0;
+    padding-top: 15px;
+    color: lighten($primary, 50%);
+  }
+}
+@media (max-width: 991px) {
+  section#footer3 {
+    ul.nav {
+      display: block;
+      float: none;
+      a.nav-link {
+        padding: .5rem 1rem;
+      }
+    }
+  }
+  section#footer3 .wt-border-top .text-right {
+    text-align: left !important;
+  }
+}

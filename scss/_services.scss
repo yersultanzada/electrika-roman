@@ -1,0 +1,45 @@
+// Styling for the services section
+section#services {
+  .wt-block-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #a8b7d5;
+    margin: 0 auto;
+    padding: 15px;
+    img {
+      width: 50px;
+    }
+  }
+}
+// Styling for the services1 section
+section#services1 {
+  .wt-block-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #cccccc;
+    margin: 0 auto;
+    padding: 15px;
+    img {
+      width: 50px;
+    }
+  }
+}
+// Styling for the services2 section
+section#services2 {
+  img {
+    width: 70px;
+  }
+  .wt-block-service-light {
+    background-color: $primary-200;
+    padding: 100px 50px;
+  }
+  .wt-block-service-dark {
+    background-color: $primary;
+    padding: 100px 50px;
+    p {
+      color: lighten($primary, 40%);
+    }
+  }
+}

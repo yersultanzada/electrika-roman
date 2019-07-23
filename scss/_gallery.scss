@@ -1,0 +1,137 @@
+#blueimp-gallery .close:not(:disabled):not(.disabled):hover {
+  color: #fff;
+}
+// Styling for the gallery section
+section#gallery {
+  .wt-block-gallery-leftImg {
+    position: relative;
+    min-height: 670px;
+    margin-bottom: 30px;
+    .wt-background-galleryImg-l {
+      background: url(../img/ver3.jpg) no-repeat 50% 50% / cover;
+    }
+  }
+  .wt-block-gallery-rightImg {
+    position: relative;
+    min-height: 320px;
+    margin-bottom: 30px;
+    .wt-background-galleryImg-r {
+      background: url(../img/ver4.jpg) no-repeat 50% 50% / cover;
+    }
+    .wt-background-galleryImg-r2 {
+      background: url(../img/ver5.jpg) no-repeat 50% 50% / cover;
+    }
+  }
+  .wt-background-galleryOverlay {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 30px 20px;
+    margin-top: auto;
+    background: rgba(0,0,0, 0.15)
+  }
+}
+
+// Styling for the gallery1 section
+section#gallery1 {
+  .wt-block-gallery-leftImg {
+    position: relative;
+    min-height: 670px;
+    margin-bottom: 30px;
+    .wt-background-galleryImg-l {
+      background: $primary;
+    }
+  }
+  .wt-block-gallery-rightImg {
+    position: relative;
+    min-height: 320px;
+    margin-bottom: 30px;
+    .wt-background-galleryImg-r {
+      background: $primary;
+    }
+    .wt-background-galleryImg-r2 {
+      background: $primary;
+    }
+  }
+  .wt-background-galleryOverlay {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 30px 20px;
+    margin-top: auto;
+    background: rgba(0,0,0, 0.15)
+  }
+}
+
+// Styling for the gallery2 section
+section#gallery2 {
+  #links {
+    img {
+      height: 300px;
+      object-fit: cover;
+    }
+  }
+}
+
+// Styling for the gallery3 section
+section#gallery3 {
+  .owl-carousel {
+    .item {
+      display: flex;
+      align-items: flex-start;
+      height: 350px;
+      background-color: $primary;
+      img {
+        align-self: center;
+        margin: auto;
+        width: 80px;
+      }
+    }
+    .owl-nav {
+      display: block !important;
+      .owl-prev {
+        position: absolute;
+        top: 39%;
+        left: -5px;
+        background-color: #fff;
+        color: #000;
+        padding: 10px;
+        border-radius: 0
+      }
+      .owl-next {
+        position: absolute;
+        top: 39%;
+        right: -5px;
+        background-color: #fff;
+        color: #000;
+        padding: 10px;
+        border-radius: 0
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  section#gallery3 {
+    .owl-carousel {
+      .item {
+        height: 550px;
+        img {
+          width: 128px;
+        }
+      }
+      .owl-nav {
+        .owl-prev {
+          top: 43%;
+        }
+        .owl-next {
+          top: 43%;
+        }
+      }
+    }
+  }
+}

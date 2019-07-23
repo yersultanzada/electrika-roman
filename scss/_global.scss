@@ -1,0 +1,276 @@
+// Global styling for this template
+body {
+  overflow-x: hidden;
+  color: $primary-200;
+  @include merriweather-font;
+}
+body.js-no-scroll {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  overflow: hidden;
+}
+
+p {
+  line-height: 1.75;
+}
+
+a {
+  color: $gray-900;
+  &:hover {
+    color: lighten($gray-900, 10%);
+  }
+}
+
+.wt-text-primary {
+  color: $primary-200 !important;
+}
+.wt-block-background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -2;
+  border-radius: inherit;
+  .wt-background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+.wt-block-follow {
+  ul {
+    li {
+      text-align: center;
+      a{
+        display: block;
+        background-color: $primary-200;
+        border-radius: 4px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        color: #fff;
+        &:hover {
+          background-color: lighten($primary-200, 10%);
+        }
+      }
+    }
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  @include merriweather-font;
+}
+
+section {
+  padding: 75px 0;
+  h1.wt-section-heroTitle {
+    font-size: 90px;
+    line-height: 1.22;
+    font-weight: 400;
+    width: 100%;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    font-style: normal;
+    letter-spacing: -.021em;
+  }
+  h2.wt-section-title {
+    font-size: 34px;
+    line-height: 1.18;
+    font-weight: 700;
+    width: 100%;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    font-style: normal;
+    letter-spacing: -.021em;
+  }
+  p.wt-section-subtitle {
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 400;
+    width: 100%;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    font-style: normal;
+    letter-spacing: 0;
+  }
+  h3.wt-section-heading {
+    font-size: 26px;
+    line-height: 1.31;
+    font-weight: 700;
+    width: 100%;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    font-style: normal;
+    letter-spacing: 0;
+  }
+  p.wt-section-subheading {
+    font-size: 22px;
+    line-height: 1.36;
+    font-weight: 400;
+    width: 100%;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    font-style: normal;
+    letter-spacing: 0;
+  }
+  p.wt-section-text {
+    font-size: 16px;
+    line-height: 1.56;
+    width: 100%;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    font-style: normal;
+    letter-spacing: 0;
+  }
+  p.wt-section-small-text {
+    font-size: 12px;
+    line-height: 1.67;
+    width: 100%;
+  }
+}
+
+// Form Styles
+form.wt-form-rounded {
+  .form-group {
+    color: $primary-200;
+    .form-control {
+      border-radius: 25px;
+    }
+  }
+  .btn {
+    margin-top: 10px;
+  }
+}
+
+// Button Styles
+.btn {
+  font-size: 14px;
+  line-height: 1.2;
+  @include merriweather-font;
+}
+.wt-btn-size-sm {
+  font-size: 12px;
+  padding: 10px 16px;
+}
+.wt-btn-size-md {
+  padding: 12px 24px;
+}
+.wt-btn-size-xl {
+  font-size: 15px;
+  padding: 15px 30px;
+}
+
+.wt-btn-primary {
+  background-color: $primary-200;
+  border-color: $primary-200;
+  color: white !important;
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: darken($primary-200, 7.5%) !important;
+    border-color: darken($primary-200, 7.5%) !important;
+    color: white !important;
+  }
+  &:active,
+  &:focus {
+    box-shadow: 0 0 0 0.2rem rgba(254, 209, 55,.5) !important;
+  }
+}
+.wt-btn-white {
+  background-color: white;
+  border-color: white;
+  color: $primary-200 !important;
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: darken(white, 7.5%) !important;
+    border-color: darken(white, 7.5%) !important;
+    color: $primary-200 !important;
+  }
+  &:active,
+  &:focus {
+    box-shadow: 0 0 0 0.2rem rgba(254, 209, 55,.5) !important;
+  }
+}
+.wt-btn-rounded {
+  border-radius: 25px;
+}
+.wt-btn-transparent {
+  background-color: transparent;
+  border-color: $primary-200;
+  color: $primary-200 !important;
+  border-width: 1px;
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: transparent !important;
+    border-color: $primary-200 !important;
+    color: $primary-200 !important;
+  }
+  &:active,
+  &:focus {
+    box-shadow: 0 0 0 0.2rem rgba(254, 209, 55,.5) !important;
+  }
+}
+
+// Highlight color customization
+::-moz-selection {
+  background: $primary-200;
+  text-shadow: none;
+}
+
+::selection {
+  background: $primary;
+  text-shadow: none;
+}
+
+img::selection {
+  background: transparent;
+}
+
+img::-moz-selection {
+  background: transparent;
+}
+
+// Media queries
+@media (max-width: 767px) {
+  section {
+    padding: 40px 0;
+  }
+  section h1.wt-section-heroTitle {
+    font-size: 40px;
+  }
+  section h2.wt-section-title {
+    font-size: 26px;
+  }
+  section h3.wt-section-heading {
+    font-size: 20px;
+  }
+  section p.wt-section-subheading {
+    font-size: 18px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    max-width: 740px;
+  }
+  section {
+    padding: 60px 0;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}

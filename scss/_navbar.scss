@@ -1,0 +1,824 @@
+// Styling for the navbar0
+#mainNav0 {
+  background-color: $primary-100;
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: $primary-100;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.2s;
+    ul {
+      list-style-type: none;
+      padding-left: 0;
+      li {
+        text-align: center;
+        a {
+          display: block;
+          font-size: 100%;
+          font-weight: 400;
+          padding: 0.75em;
+          color: $gray-900;
+          &.active,
+          &:hover {
+            color: lighten($gray-900, 10%);
+          }
+        }
+      }
+    }
+    .closebtn {
+      position: absolute;
+      top: 10px;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+      text-decoration: none;
+      color: $primary-200;
+    }
+  }
+  .navbar-brand {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: $primary-200;
+    &.active,
+    &:active,
+    &:focus,
+    &:hover {
+      color: darken($primary-200, 10%);
+    }
+  }
+  .burger_menu {
+    float: right;
+    padding-top: 10px;
+    color: $primary-200;
+  }
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        font-size: 100%;
+        font-weight: 400;
+        padding: 0.75em 0;
+        color: $primary-200;
+        &.active,
+        &:hover {
+          color: $primary-200;
+        }
+      }
+    }
+  }
+  .request_btn a.btn{
+    margin-left: 10px;
+  }
+}
+@media(min-width:992px) {
+  #mainNav0 {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
+    -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
+    transition: padding-top 0.3s, padding-bottom 0.3s;
+    border: none;
+    .navbar-brand {
+      font-size: 1.75em;
+      font-weight: bold;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      transition: all 0.3s;
+    }
+    .navbar-nav {
+      .nav-item {
+        .nav-link {
+          padding: 1.1em 0.5em !important;
+        }
+      }
+    }
+  }
+}
+.menu-modal#menuModal0 {
+  height: 100%;
+  overflow-y: hidden !important;
+  .modal-dialog {
+    margin: 0;
+    max-width: 100vw;
+    height: 100%;
+  }
+  .modal-content {
+    background-color: $primary-100;
+    text-align: center;
+    height: 100%;
+    border: none;
+    border-radius: 0;
+    .modal-body {
+      padding: 20px 25px;
+      overflow-y: auto;
+      a.menu_logo {
+        font-size: 1.5em;
+        font-weight: 700;
+        color: $primary-200;
+      }
+      a.nav-link {
+        display: inline-block;
+      }
+      .modal_helper {
+        height: 67px;
+      }
+      .request_btn {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        padding: 10px 0 20px 0;
+        background-color: $primary-100;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+    }
+  }
+  .close-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1000;
+    cursor: pointer;
+    background-color: transparent;
+    a {
+      display: block;
+      padding: 10px 15px;
+      color: $primary-200;
+    }
+  }
+}
+
+// Styling for the navbar1
+#mainNav {
+  background-color: transparent;
+  .navbar-brand {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: $primary-200;
+    &.active,
+    &:active,
+    &:focus,
+    &:hover {
+      color: darken($primary-200, 10%);
+    }
+  }
+  .burger_menu {
+    float: right;
+    padding-top: 10px;
+    color: $primary-200;
+  }
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        font-size: 100%;
+        font-weight: 400;
+        padding: 0.75em 0;
+        color: $gray-900;
+        &.active,
+        &:hover {
+          color: lighten($gray-900, 10%);
+        }
+      }
+    }
+  }
+  .request_btn a.btn{
+    margin-left: 10px;
+  }
+}
+@media(min-width:992px) {
+  #mainNav {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
+    -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
+    transition: padding-top 0.3s, padding-bottom 0.3s;
+    border: none;
+    background-color: transparent;
+    .navbar-brand {
+      font-size: 1.75em;
+      font-weight: bold;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      transition: all 0.3s;
+    }
+    .navbar-nav {
+      .nav-item {
+        .nav-link {
+          padding: 1.1em 0.5em !important;
+        }
+      }
+    }
+  }
+}
+.menu-modal#menuModal {
+  height: 100%;
+  overflow-y: hidden !important;
+  .modal-dialog {
+    margin: 0;
+    max-width: 100vw;
+    height: 100%;
+  }
+  .modal-content {
+    text-align: center;
+    height: 100%;
+    border: none;
+    border-radius: 0;
+    .modal-body {
+      padding: 20px 25px;
+      overflow-y: auto;
+      a.menu_logo {
+        font-size: 1.5em;
+        font-weight: 700;
+        color: $primary-200;
+      }
+      a.nav-link {
+        display: inline-block;
+      }
+      .modal_helper {
+        height: 67px;
+      }
+      .request_btn {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        padding: 10px 0 20px 0;
+        background-color: #fff;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+    }
+  }
+  .close-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1000;
+    cursor: pointer;
+    background-color: transparent;
+    a {
+      display: block;
+      padding: 10px 15px;
+      color: $primary-200;
+    }
+  }
+}
+
+// Styling for the navbar2
+.mainNav2-top {
+  background-color: $primary-200;
+}
+#mainNav2 {
+  background-color: $primary-100;
+  .navbar-brand {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: $primary-200;
+    &.active,
+    &:active,
+    &:focus,
+    &:hover {
+      color: darken($primary-200, 10%);
+    }
+  }
+  .burger_menu {
+    float: right;
+    padding-top: 10px;
+    color: $primary-200;
+  }
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        font-size: 100%;
+        font-weight: 400;
+        padding: 0.75em 0;
+        color: $gray-900;
+        &.active,
+        &:hover {
+          color: $gray-900;
+        }
+      }
+    }
+  }
+  .request_btn a.btn{
+    margin-left: 10px;
+  }
+}
+@media(min-width:992px) {
+  #mainNav2 {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
+    -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
+    transition: padding-top 0.3s, padding-bottom 0.3s;
+    border: none;
+    background-color: $primary-100;
+    .navbar-brand {
+      font-size: 1.75em;
+      font-weight: bold;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      transition: all 0.3s;
+    }
+    .navbar-nav {
+      .nav-item {
+        .nav-link {
+          padding: 1.1em 0.5em !important;
+        }
+      }
+    }
+  }
+}
+.menu-modal#menuModal2 {
+  height: 100%;
+  overflow-y: hidden !important;
+  .modal-dialog {
+    margin: 0;
+    max-width: 100vw;
+    height: 100%;
+  }
+  .modal-content {
+    background-color: $primary-100;
+    text-align: center;
+    height: 100%;
+    border: none;
+    border-radius: 0;
+    .modal-body {
+      padding: 20px 25px;
+      overflow-y: auto;
+      a.menu_logo {
+        font-size: 1.5em;
+        font-weight: 700;
+        color: $primary-200;
+      }
+      a.nav-link {
+        display: inline-block;
+      }
+      a.menu_tel {
+        display: inline-block;
+        background-color: $primary-200;
+        padding: 5px;
+        border-radius: 8px;
+        margin-top: 10px;
+      }
+      .modal_helper {
+        height: 67px;
+      }
+      .request_btn {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        padding: 10px 0 20px 0;
+        background-color: $primary-100;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+    }
+  }
+  .close-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1000;
+    cursor: pointer;
+    background-color: transparent;
+    a {
+      display: block;
+      padding: 10px 15px;
+      color: $primary-200;
+    }
+  }
+}
+
+// Styling for the navbar3
+#mainNav3 {
+  .navbar {
+    background-color: #fff;
+  }
+  .navbar-brand {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: $primary-200;
+    &.active,
+    &:active,
+    &:focus,
+    &:hover {
+      color: darken($primary-200, 10%);
+    }
+  }
+  .burger_menu {
+    float: right;
+    padding-top: 10px;
+    color: $primary-200;
+  }
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        font-size: 100%;
+        font-weight: 400;
+        padding: 0.75em 0;
+        color: $gray-900;
+        &.active,
+        &:hover {
+          color: $gray-900;
+        }
+      }
+    }
+  }
+  .wt-block-navInfo {
+    color: $gray-900;
+    .wt-navInfo-text {
+      font-size: 12px;
+      line-height: 1.67;
+      font-weight: 300;
+      -webkit-text-decoration: none;
+      text-decoration: none;
+      font-style: normal;
+      letter-spacing: 0;
+    }
+  }
+  .request_btn a.btn{
+    margin-left: 10px;
+  }
+  .mainNav3-bottom {
+    background-color: $primary-100;
+  }
+}
+@media(min-width:992px) {
+  #mainNav3 {
+    -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
+    -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
+    transition: padding-top 0.3s, padding-bottom 0.3s;
+    border: none;
+    background-color: transparent;
+    .navbar {
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+    .navbar-brand {
+      font-size: 1.75em;
+      font-weight: bold;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      transition: all 0.3s;
+    }
+    .navbar-nav {
+      .nav-item {
+        .nav-link {
+          padding: 0.3em 0.5em !important;
+        }
+      }
+    }
+    .mainNav3-bottom .navbar-nav {
+      flex-direction: row;
+    }
+  }
+}
+@media(min-width:992px) and (max-width: 1199px) {
+  #mainNav3 .wt-block-navInfo > div {
+    display: block !important;
+    margin-bottom: 5px;
+  }
+}
+.menu-modal#menuModal3 {
+  height: 100%;
+  overflow-y: hidden !important;
+  .modal-dialog {
+    margin: 0;
+    max-width: 100vw;
+    height: 100%;
+  }
+  .modal-content {
+    text-align: center;
+    height: 100%;
+    border: none;
+    border-radius: 0;
+    .modal-body {
+      padding: 20px 25px;
+      overflow-y: auto;
+      a.menu_logo {
+        font-size: 1.5em;
+        font-weight: 700;
+        color: $primary-200;
+      }
+      a.nav-link {
+        display: inline-block;
+      }
+      .wt-block-navInfo {
+        color: $gray-900;
+        .wt-navInfo-text {
+          font-size: 12px;
+          line-height: 1.67;
+          font-weight: 300;
+          -webkit-text-decoration: none;
+          text-decoration: none;
+          font-style: normal;
+          letter-spacing: 0;
+        }
+      }
+      .modal_helper {
+        height: 67px;
+      }
+      .request_btn {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        padding: 10px 0 20px 0;
+        background-color: #fff;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+    }
+  }
+  .close-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1000;
+    cursor: pointer;
+    background-color: transparent;
+    a {
+      display: block;
+      padding: 10px 15px;
+      color: $primary-200;
+    }
+  }
+}
+
+// Styling for the navbar4
+#mainNav4 {
+  .navbar {
+    background-color: #fff;
+  }
+  .navbar-brand {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: $primary-200;
+    &.active,
+    &:active,
+    &:focus,
+    &:hover {
+      color: darken($primary-200, 10%);
+    }
+  }
+  .burger_menu {
+    float: right;
+    padding-top: 10px;
+    color: $primary-200;
+  }
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        font-size: 100%;
+        font-weight: 400;
+        padding: 0.75em 0;
+        color: $gray-900;
+        &.active,
+        &:hover {
+          color: $gray-900;
+        }
+      }
+    }
+  }
+  .request_btn a.btn{
+    margin-left: 10px;
+  }
+  .mainNav4-bottom {
+    background-color: #fff;
+  }
+}
+@media(min-width:992px) {
+  #mainNav4 {
+    -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
+    -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
+    transition: padding-top 0.3s, padding-bottom 0.3s;
+    border: none;
+    background-color: transparent;
+    .navbar {
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+    .navbar-brand {
+      font-size: 1.75em;
+      font-weight: bold;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      transition: all 0.3s;
+    }
+    .navbar-nav {
+      .nav-item {
+        .nav-link {
+          padding: 0.3em 0.5em !important;
+        }
+      }
+    }
+    .mainNav4-bottom .navbar-nav {
+      flex-direction: row;
+    }
+  }
+}
+.menu-modal#menuModal4 {
+  height: 100%;
+  overflow-y: hidden !important;
+  .modal-dialog {
+    margin: 0;
+    max-width: 100vw;
+    height: 100%;
+  }
+  .modal-content {
+    text-align: center;
+    height: 100%;
+    border: none;
+    border-radius: 0;
+    .modal-body {
+      padding: 20px 25px;
+      overflow-y: auto;
+      a.menu_logo {
+        font-size: 1.5em;
+        font-weight: 700;
+        color: $primary-200;
+      }
+      a.nav-link {
+        display: inline-block;
+      }
+      .wt-block-navInfo {
+        color: $gray-900;
+        .wt-navInfo-text {
+          font-size: 12px;
+          line-height: 1.67;
+          font-weight: 300;
+          -webkit-text-decoration: none;
+          text-decoration: none;
+          font-style: normal;
+          letter-spacing: 0;
+        }
+      }
+      .modal_helper {
+        height: 67px;
+      }
+      .wt-modal-bottom {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        padding: 10px 0 20px 0;
+        background-color: #fff;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+    }
+  }
+  .close-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1000;
+    cursor: pointer;
+    background-color: transparent;
+    a {
+      display: block;
+      padding: 10px 15px;
+      color: $primary-200;
+    }
+  }
+}
+
+// Styling for the navbar5
+.mainNav5-top {
+  background-color: $primary-200;
+  a {
+    text-decoration: none;
+    i {
+      margin-right: 5px;
+      vertical-align: middle;
+    }
+  }
+  span i {
+    margin-right: 5px;
+  }
+}
+#mainNav5 {
+  background-color: $primary-100;
+  .navbar-brand {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: $primary-200;
+    &.active,
+    &:active,
+    &:focus,
+    &:hover {
+      color: darken($primary-200, 10%);
+    }
+  }
+  .burger_menu {
+    float: right;
+    padding-top: 10px;
+    color: $primary-200;
+  }
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        font-size: 100%;
+        font-weight: 400;
+        padding: 0.75em 0;
+        color: $gray-900;
+        &.active,
+        &:hover {
+          color: $gray-900;
+        }
+      }
+    }
+  }
+  .request_btn a.btn{
+    margin-left: 10px;
+  }
+}
+@media(min-width:992px) {
+  #mainNav5 {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    -webkit-transition: padding-top 0.3s, padding-bottom 0.3s;
+    -moz-transition: padding-top 0.3s, padding-bottom 0.3s;
+    transition: padding-top 0.3s, padding-bottom 0.3s;
+    border: none;
+    background-color: $primary-100;
+    .navbar-brand {
+      font-size: 1.75em;
+      font-weight: bold;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      transition: all 0.3s;
+    }
+    .navbar-nav {
+      .nav-item {
+        .nav-link {
+          padding: 1.1em 0.5em !important;
+        }
+      }
+    }
+  }
+}
+.menu-modal#menuModal5 {
+  height: 100%;
+  overflow-y: hidden !important;
+  .modal-dialog {
+    margin: 0;
+    max-width: 100vw;
+    height: 100%;
+  }
+  .modal-content {
+    background-color: $primary-100;
+    text-align: center;
+    height: 100%;
+    border: none;
+    border-radius: 0;
+    .modal-body {
+      padding: 20px 25px;
+      overflow-y: auto;
+      a.menu_logo {
+        font-size: 1.5em;
+        font-weight: 700;
+        color: $primary-200;
+      }
+      a.nav-link {
+        display: inline-block;
+      }
+      .mainNav5-top {
+        background-color: $primary-100;
+        div {
+          margin-bottom: 10px;
+        }
+        span {
+          color: $gray-900;
+        }
+      }
+      .modal_helper {
+        height: 67px;
+      }
+      .request_btn {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        padding: 10px 0 20px 0;
+        background-color: $primary-100;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+    }
+  }
+  .close-modal {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1000;
+    cursor: pointer;
+    background-color: transparent;
+    a {
+      display: block;
+      padding: 10px 15px;
+      color: $primary-200;
+    }
+  }
+}
