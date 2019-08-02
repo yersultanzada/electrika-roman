@@ -1,0 +1,105 @@
+#team {
+  position: relative;
+  .wt-background-teamImg {
+    background:url(../img/team/team-bg.jpg) no-repeat 50% 50% / cover;
+  }
+  .owl-carousel {
+    .item {
+      position: relative;
+      .team_item_card {
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 20px;
+        width: 320px;
+        webkit-box-shadow: 1px 0 30px rgba(0,0,0,.23);
+        box-shadow: 1px 0 30px rgba(0,0,0,.23);
+        overflow: hidden;
+        margin: auto;
+        .team_item_photo {
+          .team_item_cable {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+            z-index: 1;
+            &.master_item_cable1 {
+              background: url(../img/team/cable1.jpg) no-repeat 74px 69px;
+              width: 370px;
+              height: 390px;
+            }
+            &.master_item_cable2 {
+              background: url(../img/team/cable2.jpg) no-repeat 52px 60px;
+              width: 370px;
+              height: 390px;
+            }
+            &.master_item_cable3 {
+              background: url(../img/team/cable3.jpg) no-repeat 62px 62px;
+              width: 370px;
+              height: 390px;
+            }
+          }
+          .team_item_image {
+            position: relative;
+            z-index: 2;
+            width: 170px;
+            height: 170px;
+            margin-top: 35px;
+            border-radius: 50%;
+            -o-object-fit: cover;
+            object-fit: cover;
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+        .team_item_desc {
+          position: relative;
+          z-index: 3;
+          text-align: center;
+          .team_item_name {
+            color: $main-text;
+            font-size: 20px;
+            margin-top: 40px;
+          }
+          .team_item_pos {
+            color: $secondary-text;
+          }
+        }
+      }
+    }
+    .owl-nav {
+      display: none !important;
+      margin: 0;
+      .owl-prev,.owl-next {
+        position: absolute;
+        top: 50%;
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
+        transform: translateY(-50%);
+      }
+      .owl-prev {
+        left: -20px;
+      }
+      .owl-next {
+        right: -20px;
+      }
+    }
+    .owl-dots {
+      margin-top: 10px;
+    }
+  }
+}
+
+@media(min-width:992px) {
+  #team {
+    .owl-carousel {
+      .owl-nav {
+        display: block !important;
+      }
+      .owl-dots {
+        display: none !important;
+      }
+    }
+  }
+}

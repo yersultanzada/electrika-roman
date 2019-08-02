@@ -1,8 +1,8 @@
-// Global styling for this template
 body {
   overflow-x: hidden;
-  color: $primary-200;
-  @include merriweather-font;
+  color: $gray-900;
+  font-size: 15px;
+  @include body-font;
 }
 body.js-no-scroll {
   height: 100%;
@@ -16,14 +16,15 @@ p {
 }
 
 a {
-  color: $gray-900;
+  color: white;
   &:hover {
-    color: lighten($gray-900, 10%);
+    color: white;
+    text-decoration: none;
   }
 }
 
 .wt-text-primary {
-  color: $primary-200 !important;
+  color: $gray-900 !important;
 }
 .wt-block-background {
   position: absolute;
@@ -42,25 +43,6 @@ a {
     left: 0;
   }
 }
-.wt-block-follow {
-  ul {
-    li {
-      text-align: center;
-      a{
-        display: block;
-        background-color: $primary-200;
-        border-radius: 4px;
-        width: 30px;
-        height: 30px;
-        line-height: 30px;
-        color: #fff;
-        &:hover {
-          background-color: lighten($primary-200, 10%);
-        }
-      }
-    }
-  }
-}
 
 h1,
 h2,
@@ -68,14 +50,13 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 700;
-  @include merriweather-font;
+  font-weight: 400;
 }
 
 section {
   padding: 75px 0;
   h1.wt-section-heroTitle {
-    font-size: 90px;
+    font-size: 48px;
     line-height: 1.22;
     font-weight: 400;
     width: 100%;
@@ -87,7 +68,7 @@ section {
   h2.wt-section-title {
     font-size: 34px;
     line-height: 1.18;
-    font-weight: 700;
+    font-weight: 400;
     width: 100%;
     -webkit-text-decoration: none;
     text-decoration: none;
@@ -107,7 +88,7 @@ section {
   h3.wt-section-heading {
     font-size: 26px;
     line-height: 1.31;
-    font-weight: 700;
+    font-weight: 400;
     width: 100%;
     -webkit-text-decoration: none;
     text-decoration: none;
@@ -140,24 +121,10 @@ section {
   }
 }
 
-// Form Styles
-form.wt-form-rounded {
-  .form-group {
-    color: $primary-200;
-    .form-control {
-      border-radius: 25px;
-    }
-  }
-  .btn {
-    margin-top: 10px;
-  }
-}
-
 // Button Styles
 .btn {
   font-size: 14px;
   line-height: 1.2;
-  @include merriweather-font;
 }
 .wt-btn-size-sm {
   font-size: 12px;
@@ -172,14 +139,14 @@ form.wt-form-rounded {
 }
 
 .wt-btn-primary {
-  background-color: $primary-200;
-  border-color: $primary-200;
+  background-color: $primary;
+  border-color: $primary;
   color: white !important;
   &:active,
   &:focus,
   &:hover {
-    background-color: darken($primary-200, 7.5%) !important;
-    border-color: darken($primary-200, 7.5%) !important;
+    background-color: darken($primary, 7.5%) !important;
+    border-color: darken($primary, 7.5%) !important;
     color: white !important;
   }
   &:active,
@@ -190,13 +157,13 @@ form.wt-form-rounded {
 .wt-btn-white {
   background-color: white;
   border-color: white;
-  color: $primary-200 !important;
+  color: $primary !important;
   &:active,
   &:focus,
   &:hover {
     background-color: darken(white, 7.5%) !important;
     border-color: darken(white, 7.5%) !important;
-    color: $primary-200 !important;
+    color: $primary !important;
   }
   &:active,
   &:focus {
@@ -208,15 +175,15 @@ form.wt-form-rounded {
 }
 .wt-btn-transparent {
   background-color: transparent;
-  border-color: $primary-200;
-  color: $primary-200 !important;
+  border-color: $secondary-text;
+  color: $secondary-text !important;
   border-width: 1px;
   &:active,
   &:focus,
   &:hover {
     background-color: transparent !important;
-    border-color: $primary-200 !important;
-    color: $primary-200 !important;
+    border-color: $secondary-text !important;
+    color: $secondary-text !important;
   }
   &:active,
   &:focus {
@@ -226,7 +193,7 @@ form.wt-form-rounded {
 
 // Highlight color customization
 ::-moz-selection {
-  background: $primary-200;
+  background: $secondary-text;
   text-shadow: none;
 }
 
@@ -249,7 +216,7 @@ img::-moz-selection {
     padding: 40px 0;
   }
   section h1.wt-section-heroTitle {
-    font-size: 40px;
+    font-size: 38px;
   }
   section h2.wt-section-title {
     font-size: 26px;

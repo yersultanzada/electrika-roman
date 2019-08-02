@@ -1,61 +1,83 @@
-// Styling for the calltoaction1 section
-#callToAction1 {
-  background-color: $primary-100;
-}
-
-// Styling for the calltoaction2 section
-#callToAction2 {
-  background-color: $primary-200;
-}
-
-// Styling for the calltoaction3 section
-#callToAction3 {
-  .wt-block-formLeft {
-    display: flex;
-    height: 300px;
-    background-color: #cccccc;
-    img {
-      align-self: center;
-      margin: auto;
+.callToAction {
+  padding: 20px 0;
+  .timer_text {
+    margin-bottom: 25px;
+    div {
+      margin-left: 60px;
+    }
+    &:before {
+      content: "";
+      background: url(../img/calltoaction/clock-icon.svg) no-repeat;
+      background-size: 100%;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+      transform: translateY(-50%);
     }
   }
-  .wt-block-formRight {
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 40px;
+  form.wt-form-rounded {
+    .form-row {
+      display: block;
+      .form-control {
+        border-radius: 25px;
+        padding: 12px 24px;
+        height: 43px;
+        margin-bottom: 10px;
+      }
+      button {
+        min-width: 217px;
+        &:before {
+          content: "";
+          background: url(../img/calltoaction/phone-icon_white.svg) no-repeat;
+          background-size: 100%;
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          left: 25px;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+  &.callToAction_blue {
+    background-color: $primary;
+    .timer_text {
+      color: white;
+      &:before {
+        background: url(../img/calltoaction/clock-icon_white.svg) no-repeat;
+      }
+    }
+    form.wt-form-rounded {
+      button:before {
+        background: url(../img/calltoaction/phone-icon_blue.svg) no-repeat;
+      }
+    }
   }
 }
 
-// Styling for the calltoaction4 section
-#callToAction4 {
-  background-color: $primary-200;
-  .wt-block-formCenter {
-    background-color: #fff;
-    padding: 40px 40px 50px;
-    width: 100%;
-    max-width: 550px;
-    border-radius: 3px;
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 991px) {
-  #callToAction1 form{
-    max-width: 500px;
-    margin: 0 auto;
-  }
-}
 @media (min-width: 992px) {
-  #callToAction3 {
-    .wt-block-formLeft {
-      height: 500px;
-    }
-    .wt-block-formRight {
-      max-width: 410px;
-      padding: 40px 0;
-    }
-  }
-  #callToAction4 .wt-block-formCenter {
-    padding: 40px 80px 50px;
-  }
+ .callToAction {
+   .timer_text {
+     margin-bottom: 0;
+     div {
+       margin-left: 40px;
+     }
+     &:before {
+       left: 0;
+     }
+   }
+   form.wt-form-rounded {
+     .form-row {
+       display: flex;
+       .form-control {
+         margin-bottom: 0;
+       }
+     }
+   }
+ }
 }

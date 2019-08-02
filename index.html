@@ -14,276 +14,941 @@
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap&subset=cyrillic" rel="stylesheet">
 
-    <!-- Custom fonts for this template -->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <!-- Custom styles for the owlCarousel -->
+    <link href="vendor/owlCarousel/css/owl.carousel.min.css" rel="stylesheet">
+    <link href="vendor/owlCarousel/css/owl.theme.default.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
+    <!-- Custom styles for the gallery -->
+    <link href="vendor/blueimp-gallery/css/blueimp-gallery.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this project -->
     <link href="css/project.min.css" rel="stylesheet">
 
   </head>
 
   <body id="page-top">
     <!-- Navigation -->
+    <div class="mainNav-top p-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-6 text-center text-md-left">
+            <a class="btn wt-btn-primary wt-btn-size-sm wt-btn-rounded" href="#">Заказать звонок</a>
+          </div>
+          <div class="col-6 text-right">
+            <div class="wt-block-follow">
+              <ul class="d-inline-block list-inline mb-0 mt-1">
+                <li class="list-inline-item"><a href="#"><img src="img/whatsapp-icon.svg" alt="whatsapp"></a></li>
+                <li class="list-inline-item"><a href="#"><img src="img/telegram-icon.svg" alt="telegram"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <nav class="navbar navbar-expand-lg" id="mainNav">
       <div class="container p-0">
-        <div class="col-lg-3">
-          <a class="navbar-brand js-scroll-trigger" href="#page-top">Quantum Company</a>
+        <div class="col-lg-4">
+          <a class="navbar-brand js-scroll-trigger" href="#page-top">
+            <img src="img/logo.png" alt="">
+          </a>
+          <ul class="d-inline-block list-inline mb-0">
+            <li class="list-item"><a href="tel:+7 (777) 267-66-19">+7 (777) 267-66-19</a></li>
+            <li class="list-item"><a href="tel:+7 (707) 870-00-78">+7 (707) 870-00-78</a></li>
+            <li class="list-item"><a href="tel:+7 (727) 317-43-03">+7 (727) 317-43-03</a></li>
+          </ul>
           <a class="burger_menu d-inline-block d-lg-none" data-toggle="modal" href="#menuModal">
-            <i class="fas fa-bars"></i>
+            <img src="img/menu-icon.svg" alt="">
           </a>
         </div>
-        <div class="col-lg-9 collapse navbar-collapse">
+        <div class="col-lg-8 collapse navbar-collapse">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">About us</a>
+              <a class="nav-link js-scroll-trigger" href="#about">Главная</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+              <a class="nav-link js-scroll-trigger" href="#services">Услуги</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#portfolio">Projects</a>
+              <a class="nav-link js-scroll-trigger" href="#portfolio">Проекты</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#team">Testimonials</a>
+              <a class="nav-link js-scroll-trigger" href="#team">Отзывы</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contact us</a>
+              <a class="nav-link js-scroll-trigger" href="#contact">Контакты</a>
             </li>
           </ul>
-          <div class="request_btn">
-            <a class="btn wt-btn-primary wt-btn-size-sm wt-btn-rounded" href="#">Request a quote</a>
-          </div>
         </div>
       </div>
     </nav>
 
     <!-- Header -->
     <section id="masthead" class="p-0">
-      <div class="wt-block-background">
-        <div class="wt-background wt-background-headerImg"></div>
-        <div class="wt-background wt-background-headerOverlay"></div>
-      </div>
-      <div class="container">
-        <div class="row wt-block-intro">
-            <div class="col-lg-6 align-self-center text-center text-lg-left">
-              <div class="wt-intro-text">
-                <h1 class="wt-section-heroTitle text-white mb-4">
-                  BeZee Company
-                </h1>
-                <p class="wt-section-subtitle text-white">
-                  Products and services of the highest quality
-                </p>
-              </div>
-            </div>
-            <div class="col-lg-6 wt-text-primary">
-              <div class="wt-intro-form">
-                <h3 class="wt-section-heading text-center">
-                  Want to work with us?
-                </h3>
-                <p class="wt-section-subheading text-center">
-                  Send a request and get a complete list of our offers!
-                </p>
-                <form class="wt-form-rounded">
-                  <div class="form-group">
-                    <label for="headerInputName">Name *</label>
-                    <input type="text" class="form-control" id="headerInputName">
-                  </div>
-                  <div class="form-group">
-                    <label for="headerInputPhoneNumber">Phone number *</label>
-                    <input type="tel" class="form-control" id="headerInputPhoneNumber">
-                  </div>
-                  <button type="submit" class="btn wt-btn-primary wt-btn-size-md wt-btn-rounded w-100">Request a quote</button>
-                </form>
-              </div>
-            </div>
-          </div>
-      </div>
-    </section>
+        <div class="container-fluid">
+            <div class="row">
+                <div id="main-carousel" class="owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="wt-block-background">
+                            <div class="wt-background wt-background-headerImg-1"></div>
+                            <div class="wt-background wt-background-headerOverlay"></div>
+                        </div>
+                        <div class="container-fluid">
+                            <div class="row block_intro">
+                                <div class="col-lg-12">
+                                    <div class="intro_text text-center">
+                                        <h1 class="wt-section-heroTitle text-white mb-4">
+                                            Наша задача - стараться  оказывать услуги высокого качества
+                                        </h1>
+                                        <p class="wt-section-subheading text-white mb-4">
+                                            Относится добросовестно к работе,и оправдать оказанное доверие.На фото установленная подвесная люстра в квартире.Г. Алматы ЖК «Вавилон».,Розыбакиева 247.,блок 4.
+                                        </p>
+                                        <div class="block_buttons">
+                                            <a href="#" class="btn wt-btn-primary wt-btn-size-md wt-btn-rounded mb-3">Посмотреть работы</a>
+                                            <a href="#" class="btn wt-btn-white wt-btn-size-md wt-btn-rounded ml-5 mb-3">Отзывы клиентов</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-    <!-- About -->
-    <section id="about" class="text-center wt-text-primary">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <img src="img/ver2.JPG" class="w-100" alt="">
-          </div>
-          <div class="col-lg-8 offset-lg-2">
-            <h2 class="wt-section-title mb-4 mt-4">
-              About the company
-            </h2>
-            <p class="wt-section-text">
-              The profound expertise of our team, deep understanding of all business aspects, ideal knowledge of processes will help to deal with various issues.
-            </p>
-            <p class="wt-section-text">
-              We create unique and innovative solutions for our customers along with the high-quality support services and personal approach to any case. Feel free to entrust your business to our experts, and you’ll see the difference!
-            </p>
-            <div class="wt-block-follow mt-4">
-              <h3 class="wt-section-heading d-inline-block mb-0">
-                  Follow us:
-              </h3>
-              <ul class="d-inline-block list-inline pl-3 mb-0 align-text-bottom">
-                <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
-                <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
-                <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-              </ul>
-              <div class="mt-5">
-                <a href="#" class="btn wt-btn-primary wt-btn-size-md wt-btn-transparent wt-btn-rounded">Request a quote</a>
-              </div>
+                    <div class="item">
+                        <div class="wt-block-background">
+                            <div class="wt-background wt-background-headerImg-2"></div>
+                            <div class="wt-background wt-background-headerOverlay"></div>
+                        </div>
+                        <div class="container-fluid">
+                            <div class="row block_intro">
+                                <div class="col-lg-12">
+                                    <div class="intro_text text-center">
+                                        <h1 class="wt-section-heroTitle text-white mb-4">
+                                            Наша задача - стараться  оказывать услуги высокого качества
+                                        </h1>
+                                        <p class="wt-section-subheading text-white mb-4">
+                                            Относится добросовестно к работе,и оправдать оказанное доверие.На фото установленная подвесная люстра в квартире.Г. Алматы ЖК «Вавилон».,Розыбакиева 247.,блок 4.
+                                        </p>
+                                        <div class="block_buttons">
+                                            <a href="#" class="btn wt-btn-primary wt-btn-size-md wt-btn-rounded mb-3">Посмотреть работы</a>
+                                            <a href="#" class="btn wt-btn-white wt-btn-size-md wt-btn-rounded ml-5 mb-3">Отзывы клиентов</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </section>
 
     <!-- Services -->
-    <section id="services" class="text-center wt-text-primary">
+    <section id="services" class="text-center">
+      <div class="wt-block-background">
+        <div class="wt-background wt-background-servicesImg"></div>
+      </div>
       <div class="container">
         <div class="row">
           <h2 class="wt-section-title mb-5">
-            Services We Provide
+            Наши услуги
           </h2>
-          <div class="col-lg-4">
-            <div class="wt-block-img">
-              <img src="img/account.svg" alt="">
-            </div>
-            <h3 class="wt-section-heading mt-4">
-              Business Consulting
-            </h3>
-            <p class="wt-section-text">
-              Our company can offer you a wide range of business consulting services.
-            </p>
-          </div>
-          <div class="col-lg-4 mt-4 mt-lg-0">
-            <div class="wt-block-img">
-              <img src="img/account.svg" alt="">
-            </div>
-            <h3 class="wt-section-heading mt-4">
-              Data Deploy
-            </h3>
-            <p class="wt-section-text">
-              Our team will successfully plan the deployment of your appliance.
-            </p>
-          </div>
-          <div class="col-lg-4 mt-4 mt-lg-0">
-            <div class="wt-block-img">
-              <img src="img/account.svg" alt="">
-            </div>
-            <h3 class="wt-section-heading mt-4">
-              Digital Branding
-            </h3>
-            <p class="wt-section-text">
-              Building brand awareness for micro and small businesses.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Gallery -->
-    <section id="gallery" class="text-center">
-      <div class="container">
-        <div class="row">
-          <h2 class="wt-section-title wt-text-primary mb-5">
-            Gallery
-          </h2>
-          <div class="col-lg-7">
-            <div class="wt-block-gallery-leftImg">
-              <div class="wt-block-background">
-                <div class="wt-background wt-background-galleryImg-l"></div>
-                <div class="wt-background-galleryOverlay">
-                  <h3 class="wt-section-heading text-white mb-0">Quantum CEO & our partners</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-5">
-            <div class="row">
-              <div class="col-md-12">
-                <div class="wt-block-gallery-rightImg">
-                  <div class="wt-block-background">
-                    <div class="wt-background wt-background-galleryImg-r"></div>
-                    <div class="wt-background-galleryOverlay">
-                      <h3 class="wt-section-heading text-white mb-0">Digital Marketing workshop lecturer</h3>
-                    </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card">
+              <img src="img/services/ser1.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Монтаж кабеля</h5>
+                <p class="card-text">Кабельные линии прокладывают так, чтобы при их эксплуатации исключалась возможность возникновения опасных механических напряжений и повреждений. Компания «ЭЛСИ профмонтаж» соблюдает все нормы,СНИПы и ГОСТы.</p>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="card_price">Цена:</div>
+                    <div class="card_price">от 180тг.</div>
                   </div>
-                </div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12">
-                <div class="wt-block-gallery-rightImg">
-                  <div class="wt-block-background">
-                    <div class="wt-background wt-background-galleryImg-r2"></div>
-                    <div class="wt-background-galleryOverlay">
-                      <h3 class="wt-section-heading text-white mb-0">Quantum Company at WebSummit</h3>
-                    </div>
+                  <div class="col-6 align-self-center">
+                    <a href="#" class="btn wt-btn-primary wt-btn-size-sm wt-btn-rounded"><span class="btn_icon"></span>Заказать</a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card">
+              <img src="img/services/ser2.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Устройство подрозетников</h5>
+                <p class="card-text">в кирпич, газоблок, гипсокартон</p>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="card_price">Цена:</div>
+                    <div class="card_price">от 1200тг.</div>
+                  </div>
+                  <div class="col-6 align-self-center">
+                    <a href="#" class="btn wt-btn-primary wt-btn-size-sm wt-btn-rounded"><span class="btn_icon"></span>Заказать</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card">
+              <img src="img/services/ser3.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Устройство подрозетников в бетон</h5>
+                <p class="card-text">Подрозетники по бетону — применяються для установки в бетон, кирпич, пенобетон, газобетон, блоки изготовленные из керамзита. Монтаж подрозетника производится в заранее подготовленное отверстие путем фиксации его раствором гипса или алебастра.</p>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="card_price">Цена:</div>
+                    <div class="card_price">от 1400тг.</div>
+                  </div>
+                  <div class="col-6 align-self-center">
+                    <a href="#" class="btn wt-btn-primary wt-btn-size-sm wt-btn-rounded"><span class="btn_icon"></span>Заказать</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card">
+              <img src="img/services/ser4.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Установка светильников</h5>
+                <p class="card-text"></p>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="card_price">Цена:</div>
+                    <div class="card_price">от 1500тг.</div>
+                  </div>
+                  <div class="col-6 align-self-center">
+                    <a href="#" class="btn wt-btn-primary wt-btn-size-sm wt-btn-rounded"><span class="btn_icon"></span>Заказать</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card">
+              <img src="img/services/ser5.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Устройство щитов всех типов</h5>
+                <p class="card-text">Монтаж распределительного щита — одна из важных работ, которая должна проводиться на основании подробной наглядной или электрической схемы после распределения потребителей на группы и выполнения необходимых расчетов.</p>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="card_price">Цена:</div>
+                    <div class="card_price">от 12000тг.</div>
+                  </div>
+                  <div class="col-6 align-self-center">
+                    <a href="#" class="btn wt-btn-primary wt-btn-size-sm wt-btn-rounded"><span class="btn_icon"></span>Заказать</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card">
+              <img src="img/services/ser6.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Монтаж концевой муфты</h5>
+                <p class="card-text">Кабельную соединительную муфту монтируют в строгом соответствии с инструкцией и с соблюдением правил техники безопасности и пожарной безопасности.</p>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="card_price">Цена:</div>
+                    <div class="card_price">от 10000тг.</div>
+                  </div>
+                  <div class="col-6 align-self-center">
+                    <a href="#" class="btn wt-btn-primary wt-btn-size-sm wt-btn-rounded"><span class="btn_icon"></span>Заказать</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card">
+              <img src="img/services/ser7.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Установка трековых светильников (на шинопроводе)</h5>
+                <p class="card-text">Сегодня трековым светильникам удалось стать достаточно популярным видом освещения.Трековые светильники стали незаменимым атрибутом крупных торговых залов,небольших бутиков,Кафе и магазинов.</p>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="card_price">Цена:</div>
+                    <div class="card_price">от 3000тг.</div>
+                  </div>
+                  <div class="col-6 align-self-center">
+                    <a href="#" class="btn wt-btn-primary wt-btn-size-sm wt-btn-rounded"><span class="btn_icon"></span>Заказать</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card">
+              <img src="img/services/ser8.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Установка точечных светильников-спотов</h5>
+                <p class="card-text">Spot-с английского переводится пятно. Потолочные светильники споты также являются элементами интерьера, позволяющими оформить освещение в помещении в соответствии с современными дизайнерскими трендами.</p>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="card_price">Цена:</div>
+                    <div class="card_price">от 700тг.</div>
+                  </div>
+                  <div class="col-6 align-self-center">
+                    <a href="#" class="btn wt-btn-primary wt-btn-size-sm wt-btn-rounded"><span class="btn_icon"></span>Заказать</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card">
+              <img src="img/services/ser9.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Устройство светодиодной подсветки</h5>
+                <p class="card-text">Светодиодная лента – настоящая сенсация современного рынка светотехники. Светодиодная лента — это осветительный модуль на гибкой основе с нанесенными на нее токопроводящими дорожками, светодиодами и резисторами.</p>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="card_price">Цена:</div>
+                    <div class="card_price">от 350тг.</div>
+                  </div>
+                  <div class="col-6 align-self-center">
+                    <a href="#" class="btn wt-btn-primary wt-btn-size-sm wt-btn-rounded"><span class="btn_icon"></span>Заказать</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="card">
+              <img src="img/services/ser10.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Установка люстр</h5>
+                <p class="card-text">Люстра - это не только осветительный прибор и предмет интерьера,но и элемент для создания завершённого интерьера. По типу конструкции делятся на подвесные и потолочные. За несколько лет работы,мы накопили определённый опыт по сборке и установке.</p>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="card_price">Цена:</div>
+                    <div class="card_price">от 2500тг.</div>
+                  </div>
+                  <div class="col-6 align-self-center">
+                    <a href="#" class="btn wt-btn-primary wt-btn-size-sm wt-btn-rounded"><span class="btn_icon"></span>Заказать</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card">
+              <img src="img/services/ser1.jpeg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Устройство штробы</h5>
+                <p class="card-text">Устройство штробы или штробление-очень трудоёмкий и тяжёлый процесс.Устройство штробы может производиться по стенам,потолку и полу. Глубина борозды не должна превышать одной трети толщины в месте устраиваемой штробы.</p>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="card_price">Цена:</div>
+                    <div class="card_price">от 400тг.</div>
+                  </div>
+                  <div class="col-6 align-self-center">
+                    <a href="#" class="btn wt-btn-primary wt-btn-size-sm wt-btn-rounded"><span class="btn_icon"></span>Заказать</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="card">
+              <img src="img/services/ser11.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Внешние сети</h5>
+                <p class="card-text mb-0">Внешние электрические сети</p>
+                <p class="card-text mb-0">Разработка проектов</p>
+                <p class="card-text mb-0">Согласования</p>
+                <p class="card-text mb-0">Технические условия</p>
+                <p class="card-text mb-0">Строительство КЛ(кабельных линий)-0,4,10,35 кВ(киловольт)</p>
+                <p class="card-text mb-0">Строительство ВЛ(воздушных линий)-0,4,10,35 кВ(киловольт)</p>
+                <p class="card-text">Строительство ТП,КТПН(трансформаторных подстанций,комплектных трансформаторных подстанций)</p>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="card_price">Цена:</div>
+                    <div class="card_price">от 400тг.</div>
+                  </div>
+                  <div class="col-6 align-self-center">
+                    <a href="#" class="btn wt-btn-primary wt-btn-size-sm wt-btn-rounded"><span class="btn_icon"></span>Заказать</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Helper -->
-    <section id="helper" style="background: #c5d5ee;">
+    <!-- callToAction -->
+    <section class="callToAction">
       <div class="container">
         <div class="row">
-          <div class="col-lg-8 text-center text-lg-left mb-4 mb-lg-0">
-            <h2 class="wt-section-title wt-text-primary">
-              Want to increase profits?
-            </h2>
-            <p class="wt-section-subheading font-weight-normal wt-text-primary">Complete the form below and receive a full analysis of your business within 2 days!</p>
+          <div class="col-lg-3 timer_text">
+            <div>
+              Мы вам перезвоним в течении <strong>1 минуты</strong>
+            </div>
           </div>
-          <div class="col-lg-4">
+          <div class="col-lg-7 offset-lg-2">
             <form class="wt-form-rounded">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Name">
-              </div>
-              <div class="form-group">
-                <input type="tel" class="form-control" placeholder="Phone number">
-              </div>
-              <button type="submit" class="btn wt-btn-primary wt-btn-size-md wt-btn-rounded w-100">Request a quote</button>
+                <div class="form-row">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Ваше имя">
+                    </div>
+                    <div class="col">
+                        <input type="tel" class="form-control" placeholder="Ваш телефон">
+                    </div>
+                    <div class="col">
+                        <button type="submit" class="btn wt-btn-primary wt-btn-size-md wt-btn-rounded w-100">Заказать звонок</button>
+                    </div>
+                </div>
             </form>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="wt-text-primary">
+    <!-- Advantages -->
+    <section id="advantages">
       <div class="container">
-        <h2 class="wt-section-title text-center mb-5">Contacts</h2>
         <div class="row">
-          <div class="col-lg-9 mb-3">
-            <img src="img/ver6.JPG" class="w-100" alt="">
+          <div class="wt-block-background">
+            <div class="wt-background wt-background-advImg"></div>
           </div>
-          <div class="col-lg-3">
-            <h3 class="wt-section-heading text-center font-weight-normal mb-4">
-              <a href="#">Company Logo</a>
-            </h3>
-            <h3 class="wt-section-heading">Address</h3>
-            <p class="wt-section-text">Head office in London - 36 Regent St.</p>
-            <h3 class="wt-section-heading">Phone</h3>
-            <p class="wt-section-text"><a href="#">+1 (234) 567 8900</a></p>
-            <h3 class="wt-section-heading">E-mail</h3>
-            <p class="wt-section-text"><a href="#">mysite@weblium.com</a></p>
-            <div class="wt-block-follow">
-              <ul class="list-inline">
-                <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
-                <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
-                <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-              </ul>
+          <div class="col-lg-6 text-center mb-5">
+            <div class="mx-auto mb-4">
+              <img src="img/advantages/check-icon_green.svg" alt="" class="adv_check">
             </div>
+            <div class="proscons_block_list">
+              <div class="proscons_list_start"></div>
+              <div class="proscons_list_item">
+                <div class="proscons_list_icon">
+                  <img src="img/advantages/car-icon_green.svg" alt="">
+                </div>
+                <div class="proscons_list_text">
+                  Бесплатный выезд
+                </div>
+              </div>
+              <div class="proscons_list_item">
+                <div class="proscons_list_icon">
+                  <img src="img/advantages/quality-icon_green.svg" alt="">
+                </div>
+                <div class="proscons_list_text">
+                  Гарантия качества
+                </div>
+              </div>
+              <div class="proscons_list_item">
+                <div class="proscons_list_icon">
+                  <img src="img/advantages/clock-icon_green.svg" alt="">
+                </div>
+                <div class="proscons_list_text">
+                  Работа выполненная<br> в срок
+                </div>
+              </div>
+              <div class="proscons_list_end"></div>
+            </div>
+          </div>
+          <div class="col-lg-6 text-center proscons_red">
+            <div class="mx-auto mb-4">
+              <img src="img/advantages/close-icon_red.svg" alt="" class="adv_check">
+            </div>
+            <div class="proscons_block_list">
+              <div class="proscons_list_start"></div>
+              <div class="proscons_list_item">
+                <div class="proscons_list_icon">
+                  <img src="img/advantages/warning-icon_red.png" alt="">
+                </div>
+                <div class="proscons_list_text">
+                  Предоставление заведомо ложной информации
+                </div>
+              </div>
+              <div class="proscons_list_item">
+                <div class="proscons_list_icon">
+                  <img src="img/advantages/sad-smile-icon_red.png" alt="" width="80">
+                </div>
+                <div class="proscons_list_text">
+                  Низкий уровень обслуживания
+                </div>
+              </div>
+              <div class="proscons_list_item">
+                <div class="proscons_list_icon">
+                  <img src="img/advantages/time-overdue-icon_red.png" alt="">
+                </div>
+                <div class="proscons_list_text">
+                  Срыв сроков
+                </div>
+              </div>
+              <div class="proscons_list_end"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery">
+      <div class="container">
+        <div id="links">
+          <div class="row">
+            <h2 class="wt-section-title mb-5 text-center">
+              Галерея проектов
+            </h2>
+            <div class="col-md-6 col-lg-4">
+              <a href="img/gallery/gal1.jpg" title="">
+                <img src="img/gallery/mini/gal1-mini.jpg" class="w-100" alt="">
+              </a>
+              <p class="wt-section-text mt-3">
+                Монтаж кабеля
+              </p>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <a href="img/gallery/gal2.jpg" title="">
+                <img src="img/gallery/mini/gal2-mini.jpg" class="w-100" alt="">
+              </a>
+              <p class="wt-section-text mt-3">
+                Устройтсво щитов
+              </p>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <a href="img/gallery/gal3.jpg" title="">
+                <img src="img/gallery/mini/gal3-mini.jpg" class="w-100" alt="">
+              </a>
+              <p class="wt-section-text mt-3">
+                Устройтсво кабеля
+              </p>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <a href="img/gallery/gal4.jpg" title="">
+                <img src="img/gallery/mini/gal4-mini.jpg" class="w-100" alt="">
+              </a>
+              <p class="wt-section-text mt-3">
+                Устройство штробы
+              </p>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <a href="img/gallery/gal5.jpg" title="">
+                <img src="img/gallery/mini/gal5-mini.jpg" class="w-100" alt="">
+              </a>
+              <p class="wt-section-text mt-3">
+                Устройство светодиодной подсветки
+              </p>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <a href="img/gallery/gal6.jpg" title="">
+                <img src="img/gallery/mini/gal6-mini.jpg" class="w-100" alt="">
+              </a>
+              <p class="wt-section-text mt-3">
+                Установка люстр
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section id="team">
+      <div class="container">
+        <div class="row">
+          <div class="wt-block-background">
+            <div class="wt-background wt-background-teamImg"></div>
+            <div class="wt-background wt-background-teamOverlay"></div>
+          </div>
+          <h2 class="wt-section-title mb-5 text-center text-white">
+            Наши мастера
+          </h2>
+          <div id="team-carousel" class="owl-carousel owl-theme">
+            <div class="item">
+              <div class="team_item_card">
+                <div class="team_item_photo text-center">
+                  <div class="team_item_cable master_item_cable1"></div>
+                  <img class="team_item_image" src="img/team/master1.jpg">
+                </div>
+                <div class="team_item_desc">
+                  <div class="team_item_name">
+                    Олег Александрович
+                  </div>
+                  <div class="team_item_pos">
+                    Инженер-электрик
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="team_item_card">
+                <div class="team_item_photo text-center">
+                  <div class="team_item_cable master_item_cable2"></div>
+                  <img class="team_item_image" src="img/team/master2.jpg">
+                </div>
+                <div class="team_item_desc">
+                  <div class="team_item_name">
+                    Станислав
+                  </div>
+                  <div class="team_item_pos">
+                    Мастер-электрик
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="team_item_card">
+                <div class="team_item_photo text-center">
+                  <div class="team_item_cable master_item_cable3"></div>
+                  <img class="team_item_image" src="img/team/master3.jpg">
+                </div>
+                <div class="team_item_desc">
+                  <div class="team_item_name">
+                    Серик
+                  </div>
+                  <div class="team_item_pos">
+                    Мастер-электрик
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="team_item_card">
+                <div class="team_item_photo text-center">
+                  <div class="team_item_cable master_item_cable2"></div>
+                  <img class="team_item_image" src="img/team/master4.jpg">
+                </div>
+                <div class="team_item_desc">
+                  <div class="team_item_name">
+                    Игорь
+                  </div>
+                  <div class="team_item_pos">
+                    Мастер-электрик
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="team_item_card">
+                <div class="team_item_photo text-center">
+                  <div class="team_item_cable master_item_cable1"></div>
+                  <img class="team_item_image" src="img/team/master5.jpg">
+                </div>
+                <div class="team_item_desc">
+                  <div class="team_item_name">
+                    Андрей
+                  </div>
+                  <div class="team_item_pos">
+                    Мастер-электрик
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="team_item_card">
+                <div class="team_item_photo text-center">
+                  <div class="team_item_cable master_item_cable3"></div>
+                  <img class="team_item_image" src="img/team/master6.jpg">
+                </div>
+                <div class="team_item_desc">
+                  <div class="team_item_name">
+                    Игорь
+                  </div>
+                  <div class="team_item_pos">
+                    Мастер-электрик
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section id="process">
+      <div class="container">
+        <div class="row">
+          <h2 class="wt-section-title mb-5 text-center">
+            Рабочий процесс
+          </h2>
+          <div class="col-md-6 col-lg-4 mb-4">
+            <iframe data-loader="youtube" data-src="ME9ZEqj7Vm8" width="100%" height="210" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4">
+            <iframe data-loader="youtube" data-src="64IjyLafHRM" width="100%" height="210" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4">
+            <iframe data-loader="youtube" data-src="5HeZulZtvKM" width="100%" height="210" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-4">
+            <iframe data-loader="youtube" data-src="XE04nXpXj8c" width="100%" height="210" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4">
+            <iframe data-loader="youtube" data-src="3X2lZ9sJmRU" width="100%" height="210" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4">
+            <iframe data-loader="youtube" data-src="j3HUEaUWRl4" width="100%" height="210" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- callToAction -->
+    <section class="callToAction" style="background-color: #FCFCFC">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 timer_text">
+            <div>
+              Мы вам перезвоним в течении <strong>1 минуты</strong>
+            </div>
+          </div>
+          <div class="col-lg-7 offset-lg-2">
+            <form class="wt-form-rounded">
+              <div class="form-row">
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Ваше имя">
+                </div>
+                <div class="col">
+                  <input type="tel" class="form-control" placeholder="Ваш телефон">
+                </div>
+                <div class="col">
+                  <button type="submit" class="btn wt-btn-primary wt-btn-size-md wt-btn-rounded w-100">Заказать звонок</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials">
+      <div class="container">
+        <div class="row">
+          <div class="wt-block-background">
+            <div class="wt-background wt-background-testimonialsImg"></div>
+          </div>
+          <h2 class="wt-section-title mb-5 text-center">
+            Отзывы клиентов
+          </h2>
+          <div class="col-12">
+            <div id="testimonials-carousel" class="owl-carousel owl-theme">
+              <div class="item">
+                <div class="item_card">
+                  <div class="row">
+                    <div class="col-sm-3 align-self-center">
+                      <div class="item_photo">
+                        <img src="img/testimonials/user1.jpg" alt="">
+                      </div>
+                      <div class="item_name">Искандер</div>
+                    </div>
+                    <div class="col-sm-9">
+                      <div class="item_date">
+                        13-03-2019 17:11
+                      </div>
+                      <div class="item_text">
+                        Кадры решают все! уже 2 года как делали капитальный ремонт. Ребят из "ЭЛСИ" мне порекомендовали друзья.
+                        Тот самый случай когда мозги-язык-руки из правильного места.
+                        Что понравилось. Выслушали и правильно поняли наши потребности, давали дельные советы, сейчас рад что тогда прислушался. Интернет кабели у меня все в розетках, по дому ни одного провода, кайф. Выдержали сроки. Работали аккуратно, чисто, все было понятно, объясняли если где-то были вопросы. Год назад обращался к ним с вопросом, меняли провайдера, так они все помнили, т.к. работают по системе, это вообще жирный плюс. Рекомендую однозначно! Следующий ремонт или переезд, голова не болит кого буду звать.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item_card item_card_2">
+                  <div class="row">
+                    <div class="col-sm-3 align-self-center">
+                      <div class="item_photo">
+                        <img src="img/testimonials/user2.jpg" alt="">
+                      </div>
+                      <div class="item_name">Ербол</div>
+                    </div>
+                    <div class="col-sm-9">
+                      <div class="item_date">
+                        17-03-2019 04:24
+                      </div>
+                      <div class="item_text">
+                        Делал капитальный ремонт в 2-х комнатной квартире. Ребята с ЭЛСИ приехали вовремя, всё замерили, нарисовали, распланировали, посоветовали какие провода необходимы для  моей квартиры. Сделали всё качественно в приемлемые сроки.уже 5 год пошёл после ремонта и все розетки, узлы, светильники, оборудование работают без проблем.
+                        За весь период ремонтных работ по электричеству мне не пришлось бегать за ними, исправлять что-то, торопить их. Приятно видеть когда люди знаючи делают своё дело.
+                        Я рекомендую ЭЛСИ всем кому нужно качество.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item_card item_card_3">
+                  <div class="row">
+                    <div class="col-sm-3 align-self-center">
+                      <div class="item_photo">
+                        <img src="img/testimonials/user3.jpg" alt="">
+                      </div>
+                      <div class="item_name">Салтанат</div>
+                    </div>
+                    <div class="col-sm-9">
+                      <div class="item_date">
+                        22-04-2019 04:42
+                      </div>
+                      <div class="item_text">
+                        Я очень благодарна  Роману и его компании ЭЛСИ профсонтаж за очень хорошую работу Все сделали очень быстро и грамотно Я благодарна Процветания Вашей компании !
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="item_card item_card_4">
+                  <div class="row">
+                    <div class="col-sm-3 align-self-center">
+                      <div class="item_photo">
+                        <img src="img/testimonials/user4.jpg" alt="">
+                      </div>
+                      <div class="item_name">Карим</div>
+                    </div>
+                    <div class="col-sm-9">
+                      <div class="item_date">
+                        06-03-2019 16:47
+                      </div>
+                      <div class="item_text">
+                        При переезде в новое здание, были выполнены электромонтажные работы по подключению освещения и электрооборудования.Работы выполнены в срок. На данный момент к электропроводке претензий нет.
+                        Последующие обращения в связи с необходимостью подключения нового оборудования так же оставили приятные впечатления.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Video -->
+    <section id="testimonials-video">
+      <div class="container">
+        <div class="row">
+          <h2 class="wt-section-title mb-5 text-center">
+            Видео отзывы
+          </h2>
+          <div class="col-md-6 col-lg-4 mb-4">
+            <iframe data-loader="youtube" data-src="jAIyM30-oss" width="100%" height="210" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4">
+            <iframe data-loader="youtube" data-src="36msmQvR8mU" width="100%" height="210" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4">
+            <iframe data-loader="youtube" data-src="Z6U3C2LLkd0" width="100%" height="210" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- callToAction -->
+    <section class="callToAction callToAction_blue">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 timer_text">
+            <div>
+              Мы вам перезвоним в течении <strong>1 минуты</strong>
+            </div>
+          </div>
+          <div class="col-lg-7 offset-lg-2">
+            <form class="wt-form-rounded">
+              <div class="form-row">
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Ваше имя">
+                </div>
+                <div class="col">
+                  <input type="tel" class="form-control" placeholder="Ваш телефон">
+                </div>
+                <div class="col">
+                  <button type="submit" class="btn wt-btn-white wt-btn-size-md wt-btn-rounded w-100">Заказать звонок</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacts -->
+    <section id="contacts">
+      <div class="wt-block-background">
+        <div class="wt-background wt-background-contactsImg"></div>
+      </div>
+      <div class="container">
+        <div class="row position-relative">
+          <div class="col-12">
+            <div class="contacts_caption">
+              <div class="caption_title">
+                <h2 class="wt-section-title mb-5 text-center">
+                  Контакты
+                </h2>
+              </div>
+              <div class="caption_text">
+                <div class="text_item">
+                  <div class="row">
+                    <div class="col-2 align-self-center">
+                      <img src="img/contacts/geo-icon.svg" alt="">
+                    </div>
+                    <div class="col-10">
+                      <div class="item_desc">
+                        г.Алматы, ул.Нусупбекова 11/9, оф.26
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="text_item">
+                  <div class="row">
+                    <div class="col-2 align-self-center">
+                      <img src="img/contacts/mobile-icon.svg" alt="">
+                    </div>
+                    <div class="col-10">
+                      <div class="item_desc">
+                        <a href="tel:87772676619">+7(777) 267 66 19</a> - Олег
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="text_item">
+                  <div class="row">
+                    <div class="col-2 align-self-center">
+                      <img src="img/contacts/phone-icon.svg" alt="">
+                    </div>
+                    <div class="col-10">
+                      <div class="item_desc">
+                        <a href="tel:87772676619">+7(727) 317 43 03</a> - Роман
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="text_item">
+                  <div class="row">
+                    <div class="col-2 align-self-center">
+                      <img src="img/contacts/mobile-icon.svg" alt="">
+                    </div>
+                    <div class="col-10">
+                      <div class="item_desc">
+                        <a href="tel:87772676619">+7(707) 870 00 78</a> - Роман
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="text_item">
+                  <div class="row">
+                    <div class="col-2 align-self-center">
+                      <img src="img/contacts/email-icon.svg" alt="">
+                    </div>
+                    <div class="col-10">
+                      <div class="item_desc">
+                        <a href="mailto:info@electric-kizmeter.kz">info@electric-kizmeter.kz</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img src="img/contacts/contacts-map.jpg" class="contacts_map" alt="">
           </div>
         </div>
       </div>
@@ -293,76 +958,40 @@
     <section id="footer">
       <div class="container">
         <div class="row">
-          <div class="col-md-6 col-lg-3">
-            <p class="wt-section-subheading text-white">
-              Quantum Company
-            </p>
-            <p class="wt-section-text">
-              Our company will go the extra mile to analyze the particular project in detail, and offer a business solution that will meet your requirements.
-            </p>
-          </div>
-          <div class="col-md-6 col-lg-4 text-center text-md-left mb-3 mb-md-0">
-            <ul class="row nav">
-              <li class="col-md-6 nav-item">
-                <a href="#" class="nav-link">About</a>
-              </li>
-              <li class="col-md-6 nav-item">
-                <a href="#" class="nav-link">Testimonials</a>
-              </li>
-              <li class="col-md-6 nav-item">
-                <a href="#" class="nav-link">Projects</a>
-              </li>
-              <li class="col-md-6 nav-item">
-                <a href="#" class="nav-link">Blog</a>
-              </li>
-              <li class="col-md-6 nav-item">
-                <a href="#" class="nav-link">Services</a>
-              </li>
-              <li class="col-md-6 nav-item">
-                <a href="#" class="nav-link">Resources</a>
-              </li>
-              <li class="col-md-6 nav-item">
-                <a href="#" class="nav-link">Development</a>
-              </li>
-              <li class="col-md-6 nav-item">
-                <a href="#" class="nav-link">Contact us</a>
-              </li>
+          <div class="col-md-6">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+              <img src="img/logo.png" alt="">
+            </a>
+            <ul class="d-inline-block list-inline mb-0">
+              <li class="list-item"><a href="tel:+7 (777) 267-66-19">+7 (777) 267-66-19</a></li>
+              <li class="list-item"><a href="tel:+7 (707) 870-00-78">+7 (707) 870-00-78</a></li>
+              <li class="list-item"><a href="tel:+7 (727) 317-43-03">+7 (727) 317-43-03</a></li>
             </ul>
           </div>
-          <div class="col-md-6 col-lg-2 text-center text-md-left mb-3 mb-md-0">
+          <div class="col-md-6 align-self-center text-right mb-3 mb-md-0">
             <div class="wt-block-follow">
               <p class="wt-section-text">
-                Follow us:
+                Следите за нами:
               </p>
               <ul class="list-inline mb-0 align-text-bottom">
-                <li class="list-inline-item"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                <li class="list-inline-item"><a href="#"><i class="fab fa-twitter"></i></a></li>
-                <li class="list-inline-item"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li class="list-inline-item"><a href="#"><img src="img/whatsapp-icon.svg" alt="whatsapp"></a></li>
+                <li class="list-inline-item"><a href="#"><img src="img/telegram-icon.svg" alt="telegram"></a></li>
               </ul>
             </div>
           </div>
-          <div class="col-md-6 col-lg-3">
-            <p class="wt-section-text">
-              Subscribe to get the latest news from us
-            </p>
-            <form class="wt-form-rounded">
-              <div class="form-group">
-                <input type="email" class="form-control" placeholder="Email *">
-              </div>
-              <button type="submit" class="btn wt-btn-primary wt-btn-size-md wt-btn-rounded w-100">Request a quote</button>
-            </form>
-          </div>
         </div>
         <div class="row mt-3 wt-border-top">
-          <div class="col-md-6">
-            <p class="wt-section-small-text">Created by WT Studio</p>
+          <div class="col-md-6 p-0">
+            <p class="wt-section-small-text">Создано студией WT ©</p>
           </div>
-          <div class="col-md-6 text-right">
-            <p class="wt-section-small-text">All rights Reserved</p>
+          <div class="col-md-6 p-0 text-right">
+            <p class="wt-section-small-text">Все права защищены</p>
           </div>
         </div>
       </div>
     </section>
+
+
 
     <!-- menuModal-->
     <div class="menu-modal modal fade" id="menuModal" tabindex="-1" role="dialog" aria-hidden="true">
@@ -370,53 +999,67 @@
         <div class="modal-content">
           <div class="close-modal" data-dismiss="modal">
             <a href="#">
-              <i class="fas fa-times"></i>
+              <img src="img/close.svg" alt="">
             </a>
           </div>
           <div class="modal-body">
             <div class="col-12 text-left">
-              <a class="menu_logo">Quantum Company</a>
+              <a class="menu_logo">
+                  <img src="img/logo.png" alt="">
+              </a>
             </div>
             <div class="col-12 mt-4">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link js-scroll-trigger" href="#about">About us</a>
+                  <a class="nav-link js-scroll-trigger" href="#page-top">Главная</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link js-scroll-trigger" href="#services">Services</a>
+                  <a class="nav-link js-scroll-trigger" href="#services">Услуги</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link js-scroll-trigger" href="#portfolio">Projects</a>
+                  <a class="nav-link js-scroll-trigger" href="#portfolio">Проекты</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link js-scroll-trigger" href="#team">Testimonials</a>
+                  <a class="nav-link js-scroll-trigger" href="#team">Отзывы</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link js-scroll-trigger" href="#contact">Contact us</a>
+                  <a class="nav-link js-scroll-trigger" href="#contact">Контакты</a>
                 </li>
               </ul>
             </div>
             <div class="request_btn">
-              <a class="btn wt-btn-primary wt-btn-size-sm wt-btn-rounded" href="#">Request a quote</a>
+              <a class="btn wt-btn-primary wt-btn-size-sm wt-btn-rounded" href="#">Заказать звонок</a>
             </div>
           </div>
         </div>
       </div>
     </div>
 
+    <!-- Blueimp gallery -->
+    <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls text-white">
+      <div class="slides"></div>
+      <h3 class="title"></h3>
+      <a class="prev">‹</a>
+      <a class="next">›</a>
+      <a class="close">×</a>
+      <a class="play-pause"></a>
+      <ol class="indicator"></ol>
+    </div>
+
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazy/1.7.1/jquery.lazy.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazy/1.7.1/plugins/jquery.lazy.youtube.min.js"></script>
+
     <!-- Plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/owlCarousel/js/owl.carousel.min.js" async></script>
+    <script src="vendor/blueimp-gallery/js/blueimp-gallery.min.js" async></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js" async></script>
 
-    <!-- Contact form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
-
-    <!-- Custom scripts for this template -->
-    <script src="js/project.min.js"></script>
+    <!-- Custom scripts for this project -->
+    <script src="js/project.min.js" async></script>
 
   </body>
 
