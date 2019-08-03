@@ -55,7 +55,7 @@ h6 {
 
 section {
   padding: 75px 0;
-  h1.wt-section-heroTitle {
+  div.wt-section-heroTitle {
     font-size: 48px;
     line-height: 1.22;
     font-weight: 400;
@@ -65,7 +65,17 @@ section {
     font-style: normal;
     letter-spacing: -.021em;
   }
-  h2.wt-section-title {
+  h1.wt-section-title {
+    font-size: 34px;
+    line-height: 1.18;
+    font-weight: 400;
+    width: 100%;
+    -webkit-text-decoration: none;
+    text-decoration: none;
+    font-style: normal;
+    letter-spacing: -.021em;
+  }
+  .wt-section-title-other {
     font-size: 34px;
     line-height: 1.18;
     font-weight: 400;
@@ -215,10 +225,13 @@ img::-moz-selection {
   section {
     padding: 40px 0;
   }
-  section h1.wt-section-heroTitle {
-    font-size: 38px;
+  section div.wt-section-heroTitle {
+    font-size: 30px;
   }
-  section h2.wt-section-title {
+  section h1.wt-section-title {
+    font-size: 26px;
+  }
+  section div.wt-section-title-other {
     font-size: 26px;
   }
   section h3.wt-section-heading {

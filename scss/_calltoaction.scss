@@ -1,5 +1,5 @@
 .callToAction {
-  padding: 20px 0;
+  padding: 50px 0;
   .timer_text {
     margin-bottom: 25px;
     div {
@@ -18,7 +18,7 @@
       transform: translateY(-50%);
     }
   }
-  form.wt-form-rounded {
+  form#contactForm,form#contactForm_2,form#contactForm_3 {
     .form-row {
       display: block;
       .form-control {
@@ -42,6 +42,18 @@
           transform: translateY(-50%);
         }
       }
+      .result {
+        position: absolute;
+        left: 15px;
+        #answer, #answer2 {
+          font-size: 14px;
+          color: $main-text;
+        }
+        #answer_3 {
+          font-size: 14px;
+          color: white;
+        }
+      }
     }
   }
   &.callToAction_blue {
@@ -52,7 +64,7 @@
         background: url(../img/calltoaction/clock-icon_white.svg) no-repeat;
       }
     }
-    form.wt-form-rounded {
+    form#contactForm_3 {
       button:before {
         background: url(../img/calltoaction/phone-icon_blue.svg) no-repeat;
       }
@@ -71,7 +83,7 @@
        left: 0;
      }
    }
-   form.wt-form-rounded {
+   form#contactForm,form#contactForm_2,form#contactForm_3 {
      .form-row {
        display: flex;
        .form-control {

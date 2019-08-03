@@ -67,7 +67,7 @@ section {
   padding: 75px 0;
 }
 
-section h1.wt-section-heroTitle {
+section div.wt-section-heroTitle {
   font-size: 48px;
   line-height: 1.22;
   font-weight: 400;
@@ -78,7 +78,18 @@ section h1.wt-section-heroTitle {
   letter-spacing: -.021em;
 }
 
-section h2.wt-section-title {
+section h1.wt-section-title {
+  font-size: 34px;
+  line-height: 1.18;
+  font-weight: 400;
+  width: 100%;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-style: normal;
+  letter-spacing: -.021em;
+}
+
+section .wt-section-title-other {
   font-size: 34px;
   line-height: 1.18;
   font-weight: 400;
@@ -239,10 +250,13 @@ img::-moz-selection {
   section {
     padding: 40px 0;
   }
-  section h1.wt-section-heroTitle {
-    font-size: 38px;
+  section div.wt-section-heroTitle {
+    font-size: 30px;
   }
-  section h2.wt-section-title {
+  section h1.wt-section-title {
+    font-size: 26px;
+  }
+  section div.wt-section-title-other {
     font-size: 26px;
   }
   section h3.wt-section-heading {
@@ -409,7 +423,7 @@ section#masthead {
 
 section#masthead .owl-carousel .item {
   position: relative;
-  height: 350px;
+  height: 400px;
 }
 
 section#masthead .owl-carousel .item .wt-background-headerImg-1 {
@@ -509,6 +523,7 @@ section#services .card .card-body {
 
 section#services .card .card-body .card-title {
   color: #454545;
+  font-size: 1.25rem;
 }
 
 section#services .card .card-body .card-text {
@@ -539,7 +554,7 @@ section#services .card .card-body a.btn .btn_icon {
 }
 
 .callToAction {
-  padding: 20px 0;
+  padding: 50px 0;
 }
 
 .callToAction .timer_text {
@@ -563,22 +578,22 @@ section#services .card .card-body a.btn .btn_icon {
   transform: translateY(-50%);
 }
 
-.callToAction form.wt-form-rounded .form-row {
+.callToAction form#contactForm .form-row, .callToAction form#contactForm_2 .form-row, .callToAction form#contactForm_3 .form-row {
   display: block;
 }
 
-.callToAction form.wt-form-rounded .form-row .form-control {
+.callToAction form#contactForm .form-row .form-control, .callToAction form#contactForm_2 .form-row .form-control, .callToAction form#contactForm_3 .form-row .form-control {
   border-radius: 25px;
   padding: 12px 24px;
   height: 43px;
   margin-bottom: 10px;
 }
 
-.callToAction form.wt-form-rounded .form-row button {
+.callToAction form#contactForm .form-row button, .callToAction form#contactForm_2 .form-row button, .callToAction form#contactForm_3 .form-row button {
   min-width: 217px;
 }
 
-.callToAction form.wt-form-rounded .form-row button:before {
+.callToAction form#contactForm .form-row button:before, .callToAction form#contactForm_2 .form-row button:before, .callToAction form#contactForm_3 .form-row button:before {
   content: "";
   background: url(../img/calltoaction/phone-icon_white.svg) no-repeat;
   background-size: 100%;
@@ -589,6 +604,21 @@ section#services .card .card-body a.btn .btn_icon {
   top: 50%;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
+}
+
+.callToAction form#contactForm .form-row .result, .callToAction form#contactForm_2 .form-row .result, .callToAction form#contactForm_3 .form-row .result {
+  position: absolute;
+  left: 15px;
+}
+
+.callToAction form#contactForm .form-row .result #answer, .callToAction form#contactForm .form-row .result #answer2, .callToAction form#contactForm_2 .form-row .result #answer, .callToAction form#contactForm_2 .form-row .result #answer2, .callToAction form#contactForm_3 .form-row .result #answer, .callToAction form#contactForm_3 .form-row .result #answer2 {
+  font-size: 14px;
+  color: #454545;
+}
+
+.callToAction form#contactForm .form-row .result #answer_3, .callToAction form#contactForm_2 .form-row .result #answer_3, .callToAction form#contactForm_3 .form-row .result #answer_3 {
+  font-size: 14px;
+  color: white;
 }
 
 .callToAction.callToAction_blue {
@@ -603,7 +633,7 @@ section#services .card .card-body a.btn .btn_icon {
   background: url(../img/calltoaction/clock-icon_white.svg) no-repeat;
 }
 
-.callToAction.callToAction_blue form.wt-form-rounded button:before {
+.callToAction.callToAction_blue form#contactForm_3 button:before {
   background: url(../img/calltoaction/phone-icon_blue.svg) no-repeat;
 }
 
@@ -617,12 +647,12 @@ section#services .card .card-body a.btn .btn_icon {
   .callToAction .timer_text:before {
     left: 0;
   }
-  .callToAction form.wt-form-rounded .form-row {
+  .callToAction form#contactForm .form-row, .callToAction form#contactForm_2 .form-row, .callToAction form#contactForm_3 .form-row {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  .callToAction form.wt-form-rounded .form-row .form-control {
+  .callToAction form#contactForm .form-row .form-control, .callToAction form#contactForm_2 .form-row .form-control, .callToAction form#contactForm_3 .form-row .form-control {
     margin-bottom: 0;
   }
 }

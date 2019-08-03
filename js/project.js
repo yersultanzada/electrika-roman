@@ -86,6 +86,111 @@
 
     $("iframe[data-src]").Lazy();
 
+    $('.phone').mask('+7 (999) 999-99-99');
+
+    $('#contactForm').on('submit', function(event) {
+
+        event.preventDefault();
+
+        var form = $('#contactForm'),
+            button = $('#button'),
+            answer = $('#answer'),
+            loader = $('#loader');
+
+        $.ajax({
+            url: 'handler.php',
+            type: 'POST',
+            data: form.serialize(),
+            beforeSend: function() {
+                answer.empty();
+                button.attr('disabled', true);
+                loader.fadeIn();
+            },
+            success: function(result) {
+                loader.fadeOut(300, function() {
+                    answer.text(result);
+                });
+                form.find('.form-control').val('');
+                button.attr('disabled', false);
+            },
+            error: function() {
+                loader.fadeOut(300, function() {
+                    answer.text('Произошла ошибка!');
+                });
+                button.attr('disabled', false);
+            }
+        });
+
+    });
+    $('#contactForm_2').on('submit', function(event) {
+
+        event.preventDefault();
+
+        var form = $('#contactForm_2'),
+            button = $('#button_2'),
+            answer = $('#answer_2'),
+            loader = $('#loader_2');
+
+        $.ajax({
+            url: 'handler.php',
+            type: 'POST',
+            data: form.serialize(),
+            beforeSend: function() {
+                answer.empty();
+                button.attr('disabled', true);
+                loader.fadeIn();
+            },
+            success: function(result) {
+                loader.fadeOut(300, function() {
+                    answer.text(result);
+                });
+                form.find('.form-control').val('');
+                button.attr('disabled', false);
+            },
+            error: function() {
+                loader.fadeOut(300, function() {
+                    answer.text('Произошла ошибка!');
+                });
+                button.attr('disabled', false);
+            }
+        });
+
+    });
+    $('#contactForm_3').on('submit', function(event) {
+
+        event.preventDefault();
+
+        var form = $('#contactForm_3'),
+            button = $('#button_3'),
+            answer = $('#answer_3'),
+            loader = $('#loader_3');
+
+        $.ajax({
+            url: 'handler.php',
+            type: 'POST',
+            data: form.serialize(),
+            beforeSend: function() {
+                answer.empty();
+                button.attr('disabled', true);
+                loader.fadeIn();
+            },
+            success: function(result) {
+                loader.fadeOut(300, function() {
+                    answer.text(result);
+                });
+                form.find('.form-control').val('');
+                button.attr('disabled', false);
+            },
+            error: function() {
+                loader.fadeOut(300, function() {
+                    answer.text('Произошла ошибка!');
+                });
+                button.attr('disabled', false);
+            }
+        });
+
+    });
+
 })(jQuery);
 
 
