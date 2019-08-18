@@ -1,3 +1,241 @@
 #blueimp-gallery .close:not(:disabled):not(.disabled):hover {
   color: #fff;
 }
+#gallery {
+  .container {
+    position: relative;
+  }
+  .section_lights_bg {
+    position: relative;
+    .section_electric_panel {
+      display: inline-block;
+      background: url(/img/gallery/electric-panel.png) no-repeat;
+      background-size: 100% 100%;
+      width: 175px;
+      height: 308px;
+      position: relative;
+      z-index: 3;
+    }
+    .section_black_wire {
+      position: absolute;
+      top: -75px;
+      left: 84px;
+      height: 233px;
+      width: 8px;
+      z-index: 2;
+      background: #1a1a1a;
+      -webkit-box-shadow: inset 0 0 14px #6e6e6e, 4px 4px 2px rgba(0,0,0,.2);
+      box-shadow: inset 0 0 14px #6e6e6e, 4px 4px 2px rgba(0,0,0,.2);
+    }
+    .section_black_wire_2 {
+      position: absolute;
+      bottom: -24px;
+      left: 84px;
+      height: 32px;
+      width: 8px;
+      z-index: 2;
+      background: #1a1a1a;
+      -webkit-box-shadow: inset 0 0 14px #6e6e6e, 4px 4px 2px rgba(0,0,0,.2);
+      box-shadow: inset 0 0 14px #6e6e6e, 4px 4px 2px rgba(0,0,0,.2);
+    }
+    .section_measurer {
+      display: inline-block;
+      float: right;
+      background: url(/img/gallery/measurer.png) no-repeat;
+      background-size: 100% 100%;
+      position: relative;
+      width: 180px;
+      height: 170px;
+      .section_digits {
+        position: absolute;
+        top: 14px;
+        right: 19px;
+        line-height: 14px;
+        font-size: 17px;
+      }
+    }
+  }
+  .gallery-section__lights {
+    .gallery-section__led {
+      overflow: hidden;
+      border-radius: 5px;
+      width: 93%;
+      height: 65%;
+      margin-top: 365px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      right: 0;
+      top: -4%;
+      bottom: 0;
+      transition: box-shadow 0.5s;
+      .gallery-section__led-left, .gallery-section__led-right {
+        position: absolute;
+        background: url('/img/gallery/ledv.png');
+        background-size: 120%;
+        width: 10px;
+        height: 100%;
+      }
+      .gallery-section__led-top, .gallery-section__led-bottom {
+        position: absolute;
+        background: url('/img/gallery/ledh.png');
+        background-size: auto 120%;
+        width: 100%;
+        height: 10px;
+      }
+      .gallery-section__led-left {
+        left: 0;
+        top: 0;
+        bottom: 0;
+      }
+      .gallery-section__led-right {
+        right: 0;
+        top: 0;
+        bottom: 0;
+      }
+      .gallery-section__led-top {
+        left: 0;
+        right: 0;
+        top: 0;
+      }
+      .gallery-section__led-bottom {
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
+      .gallery-section__led-left-light, .gallery-section__led-right-light, .gallery-section__led-top-light, .gallery-section__led-bottom-light {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 60, 255, 1);
+        filter: blur(15px);
+        opacity: 0;
+        transition: opacity 0.5s;
+      }
+      .gallery-section__led-left-light--on, .gallery-section__led-right-light--on, .gallery-section__led-top-light--on, .gallery-section__led-bottom-light--on {
+        opacity: 1;
+      }
+      &.gallery-section__led--on {
+        box-shadow: 0 0 80px rgba(0, 60, 255, 0.5);
+      }
+    }
+  }
+  #links {
+    padding: 0 40px;
+  }
+  h1.wt-section-title {
+    padding-top: 40px;
+  }
+}
+@media (max-width: 991px) {
+  #gallery .section_lights_bg .section_black_wire {
+    top: -60px;
+  }
+  #gallery .section_lights_bg .section_black_wire_2 {
+    bottom: -12px;
+    height: 20px;
+  }
+  #gallery .gallery-section__lights .gallery-section__led {
+    height: 74%;
+  }
+}
+@media (max-width: 767px) {
+  #gallery .section_lights_bg .section_electric_panel {
+    width: 140px;
+    height: 230px;
+  }
+  #gallery .section_lights_bg .section_measurer {
+    width: 140px;
+    height: 130px;
+  }
+  #gallery .section_lights_bg .section_measurer .section_digits {
+    top: 10px;
+    right: 15px;
+    font-size: 14px;
+  }
+  #gallery .gallery-section__lights .gallery-section__led {
+    margin-top: 329px;
+    height: 90%;
+  }
+  #gallery .section_lights_bg .section_black_wire {
+    top: -40px;
+  }
+  #gallery .section_lights_bg .section_black_wire_2 {
+    height: 18px;
+  }
+}
+@media (max-width: 535px) {
+  #gallery .gallery-section__lights .gallery-section__led {
+    height: 89%;
+  }
+}
+@media (max-width: 440px) {
+  #gallery .gallery-section__lights .gallery-section__led {
+    margin-top: 315px;
+    height: 87%;
+  }
+}
+@media (max-width: 380px) {
+  #gallery .gallery-section__lights .gallery-section__led {
+    margin-top: 305px;
+    height: 86%;
+  }
+}
+@media (max-width: 340px) {
+  #gallery .gallery-section__lights .gallery-section__led {
+    margin-top: 297px;
+    height: 85%;
+  }
+}
+@media (min-width: 1500px) {
+  #gallery {
+    .container {
+      padding: 0 80px;
+      position: relative;
+    }
+    .section_lights_bg {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      .section_electric_panel {
+        display: block;
+        position: absolute;
+        top: 150px;
+        left: -150px;
+      }
+      .section_black_wire {
+        top: -75px;
+        left: -65px;
+      }
+      .section_black_wire_2 {
+        top: 143px;
+        left: 177px;
+        height: 26px;
+        transform: rotate(90deg);
+      }
+      .section_measurer {
+        display: block;
+        float: none;
+        position: absolute;
+        top: 80px;
+        right: -145px;
+      }
+    }
+    .gallery-section__lights {
+      .gallery-section__led {
+        height: 105%;
+        margin-top: 0;
+      }
+    }
+    h1.wt-section-title {
+      padding-top: 0;
+    }
+    #links {
+      padding: 0;
+    }
+  }
+}

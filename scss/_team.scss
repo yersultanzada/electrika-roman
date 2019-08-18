@@ -103,3 +103,17 @@
     }
   }
 }
+@media(min-width:1200px) and (max-width: 1350px) {
+  #team {
+    .owl-carousel {
+      .owl-nav {
+        .owl-prev {
+          left: 0;
+        }
+        .owl-next {
+          right: 0;
+        }
+      }
+    }
+  }
+}

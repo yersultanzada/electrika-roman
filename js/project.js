@@ -191,14 +191,22 @@
 
     });
 
+    function galleryShadow() {
+        $('.gallery-section__led').toggleClass('gallery-section__led--on');
+        if ($('.gallery-section__led').hasClass('gallery-section__led--on')) {
+            $('#measurer-digits').each(function () {
+                $(this).prop('Counter',0).animate({
+                    Counter: $(this).text()
+                }, {
+                    duration: 2000,
+                    easing: 'swing',
+                    step: function (now) {
+                        $(this).text(Math.ceil(now));
+                    }
+                });
+            });
+        }
+    }
+    window.setInterval(galleryShadow, 500);
+
 })(jQuery);
-
-
-document.getElementById('links').onclick = function (event) {
-    event = event || window.event;
-    var target = event.target || event.srcElement,
-        link = target.src ? target.parentNode : target,
-        options = {index: link, event: event},
-        links = this.getElementsByTagName('a');
-    blueimp.Gallery(links, options);
-};

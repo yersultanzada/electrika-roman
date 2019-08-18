@@ -1,0 +1,17 @@
+RewriteEngine On
+RewriteCond %{HTTPS} off 
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L] 
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ 
+RewriteRule ^(.*)$ http://%1/$1 [L,R=301] 
+
+<IfModule mod_deflate.c>
+ AddOutputFilterByType DEFLATE text/html
+ AddOutputFilterByType DEFLATE application/javascript
+ AddOutputFilterByType DEFLATE text/javascript
+ AddOutputFilterByType DEFLATE text/css
+ <IfModule mod_setenvif.c>
+ BrowserMatch ^Mozilla/4 gzip-only-text/html
+ BrowserMatch ^Mozilla/4.0[678] no-gzip
+ BrowserMatch bMSIE !no-gzip !gzip-only-text/html
+ </IfModule>
+</IfModule>

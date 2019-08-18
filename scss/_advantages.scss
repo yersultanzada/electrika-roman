@@ -1,5 +1,6 @@
 #advantages {
   position: relative;
+  z-index: 2;
   .wt-background-advImg {
     background:url(../img/advantages/benefits-bg.jpg) no-repeat 50% 50% / cover;
   }
@@ -85,7 +86,7 @@
     }
   }
 }
-@media (min-width: 320px) and (max-width: 374px) {
+@media (min-width: 320px) and (max-width: 375px) {
   #advantages {
     .proscons_block_list {
       -webkit-transform: translateX(118%);

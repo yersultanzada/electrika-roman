@@ -2,6 +2,146 @@ section#services {
   position: relative;
   .wt-background-servicesImg {
     background:url(../img/services/services-bg.png);
+    background-size: 25%;
+  }
+  .services-section__electric {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    .services-section__wires {
+      background: url(/img/services/wires.png) no-repeat;
+      background-size: 100%;
+      height: 100%;
+      width: 1365px;
+      position: absolute;
+      left: 47%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      .services-section__switch {
+        background: url(/img/services/switch.png) no-repeat;
+        background-size: 100%;
+        width: 91px;
+        height: 94px;
+        position: absolute;
+        left: -38px;
+        top: -20px;
+        z-index: 5;
+        .services-section__switch-left-btn,.services-section__switch-right-btn {
+          width: 29px;
+          height: 45px;
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+        }
+        .services-section__switch-left-btn {
+          background: url(/img/services/switch-left-btn.png) no-repeat 50%;
+          background-size: 100%;
+          top: 23px;
+          left: 15px;
+        }
+        .services-section__switch-right-btn {
+          background: url(/img/services/switch-right-btn.png) no-repeat 50%;
+          background-size: 100%;
+          top: 23px;
+          left: 42px;
+        }
+        .services-section__switch-left-btn--on, .services-section__switch-right-btn--on {
+          opacity: 1;
+        }
+      }
+      .services-section__lights {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        width: 100%;
+        position: absolute;
+        top: 400px;
+        left: 0;
+        right: 0;
+        .services-section__light-left, .services-section__light-right {
+          background: url(/img/services/light-off.png) no-repeat 50%;
+          background-size: 100%;
+          position: absolute;
+          top: 0;
+          -webkit-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+          width: 279px;
+          height: 120px;
+          -webkit-transition: -webkit-filter .2s;
+          transition: -webkit-filter .2s;
+          transition: filter .2s;
+        }
+        .services-section__light-left {
+          left: 107px;
+        }
+        .services-section__light-right {
+          right: -271px;
+        }
+        .services-section__light-left--on, .services-section__light-right--on {
+          -webkit-filter: drop-shadow(0 0 40px #ffe34b);
+          filter: drop-shadow(0 0 40px #ffe34b);
+        }
+      }
+      .services-section__splitter {
+        background: url(/img/services/splitter.png) no-repeat;
+        background-size: 100%;
+        position: absolute;
+        top: 600px;
+        left: 80px;
+        width: 64px;
+        height: 55px;
+      }
+      .services-section__black-wire {
+        position: absolute;
+        left: 100px;
+        top: 350px;
+        z-index: -1;
+        height: 100%;
+        width: 8px;
+        background: #1a1a1a;
+        -webkit-box-shadow: inset 0 0 14px #6e6e6e, 4px 4px 2px rgba(0,0,0,.2);
+        box-shadow: inset 0 0 14px #6e6e6e, 4px 4px 2px rgba(0,0,0,.2);
+        &:before {
+          content: "";
+          background: -webkit-gradient(linear,left top,right top,from(#6e6e6e),color-stop(30%,hsla(0,0%,100%,0)),color-stop(70%,hsla(0,0%,100%,0)),to(#6e6e6e));
+          background: linear-gradient(90deg,#6e6e6e,hsla(0,0%,100%,0) 30%,hsla(0,0%,100%,0) 70%,#6e6e6e);
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+        }
+      }
+    }
+    .services-section__red-arrow {
+      position: absolute;
+      top: -30px;
+      left: 115px;
+      font-size: 22px;
+      font-weight: bold;
+      color: #F93636;
+      @include hand-font;
+      &:before {
+        content: " ";
+        display: block;
+        position: absolute;
+        top: 15px;
+        left: -70px;
+        width: 60px;
+        height: 51px;
+        background: url(/img/services/red-arrow.png) 100% no-repeat;
+      }
+    }
+  }
+  .container {
+    padding: 0 80px;
   }
   .card {
     width: 18rem;
@@ -49,7 +189,181 @@ section#services {
   }
 }
 
-@media(min-width:992px) {
-
+@media(max-width:1500px) {
+  section#services {
+    .services-section__electric {
+      .services-section__wires {
+        width: 1200px;
+        .services-section__lights {
+          top: 350px;
+          .services-section__light-left {
+            left: 82px;
+          }
+        }
+        .services-section__splitter {
+          top: 525px;
+          left: 53px;
+        }
+        .services-section__black-wire {
+          left: 75px;
+        }
+      }
+    }
+  }
+}
+@media(max-width:1400px) {
+  section#services {
+    .services-section__electric {
+      .services-section__wires {
+        width: 1100px;
+        .services-section__lights {
+          top: 315px;
+          .services-section__light-right {
+            right: -274px;
+          }
+        }
+        .services-section__splitter {
+          top: 478px;
+        }
+      }
+    }
+    .container {
+      padding: 0 160px;
+    }
+    .card {
+      width: 100%;
+    }
+  }
+}
+@media(max-width:1300px) {
+  section#services {
+    .services-section__electric {
+      .services-section__wires {
+        width: 1050px;
+        .services-section__lights {
+          .services-section__light-left {
+            width: 230px;
+          }
+          .services-section__light-right {
+            right: -224px;
+            width: 230px;
+          }
+        }
+        .services-section__splitter {
+          top: 457px;
+        }
+      }
+    }
+  }
+}
+@media(max-width:1200px) {
+  section#services {
+    .services-section__electric {
+      .services-section__wires {
+        width: 80%;
+        .services-section__lights {
+          top: 22vw;
+          .services-section__light-left {
+            left: 5vw;
+          }
+        }
+        .services-section__splitter {
+          top: 34.5vw;
+          left: 2.7vw;
+        }
+        .services-section__black-wire {
+          width: .6vw;
+          top: 20vw;
+          left: 4.5vw;
+        }
+      }
+    }
+  }
+}
+@media(max-width:992px) {
+  section#services {
+    .services-section__electric {
+      .services-section__wires {
+        width: 60%;
+        top: 50px;
+        .services-section__switch {
+          width: 6vw;
+          left: -2.5vw;
+          .services-section__switch-left-btn {
+            left: 1vw;
+            top: 1.5vw;
+            width: 1.9vw;
+            height: 3vw;
+          }
+          .services-section__switch-right-btn {
+            right: 1.3vw;
+            left: auto;
+            top: 1.5vw;
+            width: 1.9vw;
+            height: 3vw;
+          }
+        }
+        .services-section__red-arrow {
+          left: 12%;
+          top: -1%;
+          &:before {
+            background: url(/img/services/red-arrow-mobile.png) 100% no-repeat;
+          }
+        }
+        .services-section__lights {
+          top: 17vw;
+        }
+        .services-section__splitter {
+          top: 25vw;
+          left: 2.7vw;
+          width: 5vw;
+        }
+        .services-section__black-wire {
+          width: .6vw;
+          top: 20vw;
+          left: 4.5vw;
+        }
+      }
+    }
+    .container {
+      padding: 0 80px;
+    }
+    h1 {
+      text-shadow: 0 0 7px rgba(0,0,0,.35);
+    }
+  }
+}
+@media(max-width:800px) {
+  section#services {
+    .services-section__electric {
+      .services-section__wires {
+        width: 80%;
+        .services-section__lights {
+          top: 21vw;
+          .services-section__light-left {
+            width: 22vw;
+          }
+          .services-section__light-right {
+            width: 22vw;
+            right: -21.7vw;
+          }
+        }
+        .services-section__splitter {
+          top: 34.5vw;
+          left: 2.9vw;
+        }
+        .services-section__black-wire {
+          top: 24vw;
+        }
+      }
+    }
+  }
+}
+@media(max-width:450px) {
+  section#services {
+    .container {
+      padding: 0 50px;
+    }
+  }
 }
 

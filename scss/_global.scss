@@ -1,7 +1,7 @@
 body {
   overflow-x: hidden;
   color: $gray-900;
-  font-size: 15px;
+  font-size: 16px;
   @include body-font;
 }
 body.js-no-scroll {
@@ -116,7 +116,7 @@ section {
     letter-spacing: 0;
   }
   p.wt-section-text {
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.56;
     width: 100%;
     -webkit-text-decoration: none;

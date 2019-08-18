@@ -16,12 +16,12 @@ class ContactMailer
      * E-mail отправителя
      * @var string
      */
-    private static $emailFrom = 'veniki.almaty@yandex.kz';
+    private static $emailFrom = 'e.kizmeter@yandex.kz';
     /**
      * E-mail получателя
      * @var string
      */
-    private static $emailTo = 'veniki.almaty@yandex.kz';
+    private static $emailTo = 'e.kizmeter@yandex.kz';
 
     /**
      * Отправляет писмо, если письмо отправлено,
@@ -48,7 +48,7 @@ class ContactMailer
         // Логин или E-mail целиком
         $mailer->Username = self::$emailFrom;
         // Пароль от почтового ящика
-        $mailer->Password = 'veniki2015';
+        $mailer->Password = 'kizmeter2019';
         // Протокол соединения
         $mailer->SMTPSecure = 'ssl';
         // Порт для исходящаей почты

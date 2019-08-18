@@ -7,7 +7,7 @@
 body {
   overflow-x: hidden;
   color: #212529;
-  font-size: 15px;
+  font-size: 16px;
   font-family: 'PT Sans', sans-serif;
 }
 
@@ -134,7 +134,7 @@ section p.wt-section-subheading {
 }
 
 section p.wt-section-text {
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.56;
   width: 100%;
   -webkit-text-decoration: none;
@@ -427,11 +427,11 @@ section#masthead .owl-carousel .item {
 }
 
 section#masthead .owl-carousel .item .wt-background-headerImg-1 {
-  background: url(../img/slider/slider1.jpg) no-repeat 50% 50%/cover, #3c506f;
+  background: url(../img/slider/mobile/slider1-mobile.jpg) no-repeat 50% 50%/cover, #3c506f;
 }
 
 section#masthead .owl-carousel .item .wt-background-headerImg-2 {
-  background: url(../img/slider/slider2.jpg) no-repeat 50% 50%/cover, #3c506f;
+  background: url(../img/slider/mobile/slider2-mobile.jpg) no-repeat 50% 50%/cover, #3c506f;
 }
 
 section#masthead .owl-carousel .item .wt-background-headerOverlay {
@@ -450,10 +450,6 @@ section#masthead .owl-carousel .item .block_intro h1 {
 
 section#masthead .owl-carousel .item .block_intro p {
   text-shadow: 0 0 7px rgba(0, 0, 0, 0.35);
-}
-
-section#masthead .owl-carousel .item .block_intro .block_buttons {
-  margin-top: 150px;
 }
 
 section#masthead .owl-carousel .item .block_intro .block_buttons a {
@@ -486,9 +482,24 @@ section#masthead .owl-carousel .owl-dots .owl-dot.active span {
   section#masthead .owl-carousel .item {
     height: 600px;
   }
+  section#masthead .owl-carousel .item .wt-background-headerImg-1 {
+    background: url(../img/slider/slider1.jpg) no-repeat 50% 50%/cover, #3c506f;
+  }
+  section#masthead .owl-carousel .item .wt-background-headerImg-2 {
+    background: url(../img/slider/slider2.jpg) no-repeat 50% 50%/cover, #3c506f;
+  }
   section#masthead .owl-carousel .item .block_intro {
     padding-top: 160px;
     padding-bottom: 90px;
+  }
+  section#masthead .owl-carousel .item .block_intro .block_buttons {
+    margin-top: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  section#masthead .block_buttons {
+    display: none;
   }
 }
 
@@ -498,6 +509,165 @@ section#services {
 
 section#services .wt-background-servicesImg {
   background: url(../img/services/services-bg.png);
+  background-size: 25%;
+}
+
+section#services .services-section__electric {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+section#services .services-section__electric .services-section__wires {
+  background: url(/img/services/wires.png) no-repeat;
+  background-size: 100%;
+  height: 100%;
+  width: 1365px;
+  position: absolute;
+  left: 47%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+section#services .services-section__electric .services-section__wires .services-section__switch {
+  background: url(/img/services/switch.png) no-repeat;
+  background-size: 100%;
+  width: 91px;
+  height: 94px;
+  position: absolute;
+  left: -38px;
+  top: -20px;
+  z-index: 5;
+}
+
+section#services .services-section__electric .services-section__wires .services-section__switch .services-section__switch-left-btn, section#services .services-section__electric .services-section__wires .services-section__switch .services-section__switch-right-btn {
+  width: 29px;
+  height: 45px;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+section#services .services-section__electric .services-section__wires .services-section__switch .services-section__switch-left-btn {
+  background: url(/img/services/switch-left-btn.png) no-repeat 50%;
+  background-size: 100%;
+  top: 23px;
+  left: 15px;
+}
+
+section#services .services-section__electric .services-section__wires .services-section__switch .services-section__switch-right-btn {
+  background: url(/img/services/switch-right-btn.png) no-repeat 50%;
+  background-size: 100%;
+  top: 23px;
+  left: 42px;
+}
+
+section#services .services-section__electric .services-section__wires .services-section__switch .services-section__switch-left-btn--on, section#services .services-section__electric .services-section__wires .services-section__switch .services-section__switch-right-btn--on {
+  opacity: 1;
+}
+
+section#services .services-section__electric .services-section__wires .services-section__lights {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  top: 400px;
+  left: 0;
+  right: 0;
+}
+
+section#services .services-section__electric .services-section__wires .services-section__lights .services-section__light-left, section#services .services-section__electric .services-section__wires .services-section__lights .services-section__light-right {
+  background: url(/img/services/light-off.png) no-repeat 50%;
+  background-size: 100%;
+  position: absolute;
+  top: 0;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 279px;
+  height: 120px;
+  -webkit-transition: -webkit-filter .2s;
+  transition: -webkit-filter .2s;
+  transition: filter .2s;
+  transition: filter .2s, -webkit-filter .2s;
+}
+
+section#services .services-section__electric .services-section__wires .services-section__lights .services-section__light-left {
+  left: 107px;
+}
+
+section#services .services-section__electric .services-section__wires .services-section__lights .services-section__light-right {
+  right: -271px;
+}
+
+section#services .services-section__electric .services-section__wires .services-section__lights .services-section__light-left--on, section#services .services-section__electric .services-section__wires .services-section__lights .services-section__light-right--on {
+  -webkit-filter: drop-shadow(0 0 40px #ffe34b);
+  filter: drop-shadow(0 0 40px #ffe34b);
+}
+
+section#services .services-section__electric .services-section__wires .services-section__splitter {
+  background: url(/img/services/splitter.png) no-repeat;
+  background-size: 100%;
+  position: absolute;
+  top: 600px;
+  left: 80px;
+  width: 64px;
+  height: 55px;
+}
+
+section#services .services-section__electric .services-section__wires .services-section__black-wire {
+  position: absolute;
+  left: 100px;
+  top: 350px;
+  z-index: -1;
+  height: 100%;
+  width: 8px;
+  background: #1a1a1a;
+  -webkit-box-shadow: inset 0 0 14px #6e6e6e, 4px 4px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 14px #6e6e6e, 4px 4px 2px rgba(0, 0, 0, 0.2);
+}
+
+section#services .services-section__electric .services-section__wires .services-section__black-wire:before {
+  content: "";
+  background: -webkit-gradient(linear, left top, right top, from(#6e6e6e), color-stop(30%, rgba(255, 255, 255, 0)), color-stop(70%, rgba(255, 255, 255, 0)), to(#6e6e6e));
+  background: linear-gradient(90deg, #6e6e6e, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0) 70%, #6e6e6e);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+section#services .services-section__electric .services-section__red-arrow {
+  position: absolute;
+  top: -30px;
+  left: 115px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #F93636;
+  font-family: 'Bad Script', cursive;
+}
+
+section#services .services-section__electric .services-section__red-arrow:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 15px;
+  left: -70px;
+  width: 60px;
+  height: 51px;
+  background: url(/img/services/red-arrow.png) 100% no-repeat;
+}
+
+section#services .container {
+  padding: 0 80px;
 }
 
 section#services .card {
@@ -553,7 +723,164 @@ section#services .card .card-body a.btn .btn_icon {
   transform: translateY(-50%);
 }
 
+@media (max-width: 1500px) {
+  section#services .services-section__electric .services-section__wires {
+    width: 1200px;
+  }
+  section#services .services-section__electric .services-section__wires .services-section__lights {
+    top: 350px;
+  }
+  section#services .services-section__electric .services-section__wires .services-section__lights .services-section__light-left {
+    left: 82px;
+  }
+  section#services .services-section__electric .services-section__wires .services-section__splitter {
+    top: 525px;
+    left: 53px;
+  }
+  section#services .services-section__electric .services-section__wires .services-section__black-wire {
+    left: 75px;
+  }
+}
+
+@media (max-width: 1400px) {
+  section#services .services-section__electric .services-section__wires {
+    width: 1100px;
+  }
+  section#services .services-section__electric .services-section__wires .services-section__lights {
+    top: 315px;
+  }
+  section#services .services-section__electric .services-section__wires .services-section__lights .services-section__light-right {
+    right: -274px;
+  }
+  section#services .services-section__electric .services-section__wires .services-section__splitter {
+    top: 478px;
+  }
+  section#services .container {
+    padding: 0 160px;
+  }
+  section#services .card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1300px) {
+  section#services .services-section__electric .services-section__wires {
+    width: 1050px;
+  }
+  section#services .services-section__electric .services-section__wires .services-section__lights .services-section__light-left {
+    width: 230px;
+  }
+  section#services .services-section__electric .services-section__wires .services-section__lights .services-section__light-right {
+    right: -224px;
+    width: 230px;
+  }
+  section#services .services-section__electric .services-section__wires .services-section__splitter {
+    top: 457px;
+  }
+}
+
+@media (max-width: 1200px) {
+  section#services .services-section__electric .services-section__wires {
+    width: 80%;
+  }
+  section#services .services-section__electric .services-section__wires .services-section__lights {
+    top: 22vw;
+  }
+  section#services .services-section__electric .services-section__wires .services-section__lights .services-section__light-left {
+    left: 5vw;
+  }
+  section#services .services-section__electric .services-section__wires .services-section__splitter {
+    top: 34.5vw;
+    left: 2.7vw;
+  }
+  section#services .services-section__electric .services-section__wires .services-section__black-wire {
+    width: .6vw;
+    top: 20vw;
+    left: 4.5vw;
+  }
+}
+
+@media (max-width: 992px) {
+  section#services .services-section__electric .services-section__wires {
+    width: 60%;
+    top: 50px;
+  }
+  section#services .services-section__electric .services-section__wires .services-section__switch {
+    width: 6vw;
+    left: -2.5vw;
+  }
+  section#services .services-section__electric .services-section__wires .services-section__switch .services-section__switch-left-btn {
+    left: 1vw;
+    top: 1.5vw;
+    width: 1.9vw;
+    height: 3vw;
+  }
+  section#services .services-section__electric .services-section__wires .services-section__switch .services-section__switch-right-btn {
+    right: 1.3vw;
+    left: auto;
+    top: 1.5vw;
+    width: 1.9vw;
+    height: 3vw;
+  }
+  section#services .services-section__electric .services-section__wires .services-section__red-arrow {
+    left: 12%;
+    top: -1%;
+  }
+  section#services .services-section__electric .services-section__wires .services-section__red-arrow:before {
+    background: url(/img/services/red-arrow-mobile.png) 100% no-repeat;
+  }
+  section#services .services-section__electric .services-section__wires .services-section__lights {
+    top: 17vw;
+  }
+  section#services .services-section__electric .services-section__wires .services-section__splitter {
+    top: 25vw;
+    left: 2.7vw;
+    width: 5vw;
+  }
+  section#services .services-section__electric .services-section__wires .services-section__black-wire {
+    width: .6vw;
+    top: 20vw;
+    left: 4.5vw;
+  }
+  section#services .container {
+    padding: 0 80px;
+  }
+  section#services h1 {
+    text-shadow: 0 0 7px rgba(0, 0, 0, 0.35);
+  }
+}
+
+@media (max-width: 800px) {
+  section#services .services-section__electric .services-section__wires {
+    width: 80%;
+  }
+  section#services .services-section__electric .services-section__wires .services-section__lights {
+    top: 21vw;
+  }
+  section#services .services-section__electric .services-section__wires .services-section__lights .services-section__light-left {
+    width: 22vw;
+  }
+  section#services .services-section__electric .services-section__wires .services-section__lights .services-section__light-right {
+    width: 22vw;
+    right: -21.7vw;
+  }
+  section#services .services-section__electric .services-section__wires .services-section__splitter {
+    top: 34.5vw;
+    left: 2.9vw;
+  }
+  section#services .services-section__electric .services-section__wires .services-section__black-wire {
+    top: 24vw;
+  }
+}
+
+@media (max-width: 450px) {
+  section#services .container {
+    padding: 0 50px;
+  }
+}
+
 .callToAction {
+  position: relative;
   padding: 50px 0;
 }
 
@@ -659,6 +986,270 @@ section#services .card .card-body a.btn .btn_icon {
 
 #blueimp-gallery .close:not(:disabled):not(.disabled):hover {
   color: #fff;
+}
+
+#gallery .container {
+  position: relative;
+}
+
+#gallery .section_lights_bg {
+  position: relative;
+}
+
+#gallery .section_lights_bg .section_electric_panel {
+  display: inline-block;
+  background: url(/img/gallery/electric-panel.png) no-repeat;
+  background-size: 100% 100%;
+  width: 175px;
+  height: 308px;
+  position: relative;
+  z-index: 3;
+}
+
+#gallery .section_lights_bg .section_black_wire {
+  position: absolute;
+  top: -75px;
+  left: 84px;
+  height: 233px;
+  width: 8px;
+  z-index: 2;
+  background: #1a1a1a;
+  -webkit-box-shadow: inset 0 0 14px #6e6e6e, 4px 4px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 14px #6e6e6e, 4px 4px 2px rgba(0, 0, 0, 0.2);
+}
+
+#gallery .section_lights_bg .section_black_wire_2 {
+  position: absolute;
+  bottom: -24px;
+  left: 84px;
+  height: 32px;
+  width: 8px;
+  z-index: 2;
+  background: #1a1a1a;
+  -webkit-box-shadow: inset 0 0 14px #6e6e6e, 4px 4px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 14px #6e6e6e, 4px 4px 2px rgba(0, 0, 0, 0.2);
+}
+
+#gallery .section_lights_bg .section_measurer {
+  display: inline-block;
+  float: right;
+  background: url(/img/gallery/measurer.png) no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  width: 180px;
+  height: 170px;
+}
+
+#gallery .section_lights_bg .section_measurer .section_digits {
+  position: absolute;
+  top: 14px;
+  right: 19px;
+  line-height: 14px;
+  font-size: 17px;
+}
+
+#gallery .gallery-section__lights .gallery-section__led {
+  overflow: hidden;
+  border-radius: 5px;
+  width: 93%;
+  height: 65%;
+  margin-top: 365px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  right: 0;
+  top: -4%;
+  bottom: 0;
+  -webkit-transition: -webkit-box-shadow 0.5s;
+  transition: -webkit-box-shadow 0.5s;
+  transition: box-shadow 0.5s;
+  transition: box-shadow 0.5s, -webkit-box-shadow 0.5s;
+}
+
+#gallery .gallery-section__lights .gallery-section__led .gallery-section__led-left, #gallery .gallery-section__lights .gallery-section__led .gallery-section__led-right {
+  position: absolute;
+  background: url("/img/gallery/ledv.png");
+  background-size: 120%;
+  width: 10px;
+  height: 100%;
+}
+
+#gallery .gallery-section__lights .gallery-section__led .gallery-section__led-top, #gallery .gallery-section__lights .gallery-section__led .gallery-section__led-bottom {
+  position: absolute;
+  background: url("/img/gallery/ledh.png");
+  background-size: auto 120%;
+  width: 100%;
+  height: 10px;
+}
+
+#gallery .gallery-section__lights .gallery-section__led .gallery-section__led-left {
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+#gallery .gallery-section__lights .gallery-section__led .gallery-section__led-right {
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+#gallery .gallery-section__lights .gallery-section__led .gallery-section__led-top {
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+#gallery .gallery-section__lights .gallery-section__led .gallery-section__led-bottom {
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+#gallery .gallery-section__lights .gallery-section__led .gallery-section__led-left-light, #gallery .gallery-section__lights .gallery-section__led .gallery-section__led-right-light, #gallery .gallery-section__lights .gallery-section__led .gallery-section__led-top-light, #gallery .gallery-section__lights .gallery-section__led .gallery-section__led-bottom-light {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #003cff;
+  -webkit-filter: blur(15px);
+  filter: blur(15px);
+  opacity: 0;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+#gallery .gallery-section__lights .gallery-section__led .gallery-section__led-left-light--on, #gallery .gallery-section__lights .gallery-section__led .gallery-section__led-right-light--on, #gallery .gallery-section__lights .gallery-section__led .gallery-section__led-top-light--on, #gallery .gallery-section__lights .gallery-section__led .gallery-section__led-bottom-light--on {
+  opacity: 1;
+}
+
+#gallery .gallery-section__lights .gallery-section__led.gallery-section__led--on {
+  -webkit-box-shadow: 0 0 80px rgba(0, 60, 255, 0.5);
+  box-shadow: 0 0 80px rgba(0, 60, 255, 0.5);
+}
+
+#gallery #links {
+  padding: 0 40px;
+}
+
+#gallery h1.wt-section-title {
+  padding-top: 40px;
+}
+
+@media (max-width: 991px) {
+  #gallery .section_lights_bg .section_black_wire {
+    top: -60px;
+  }
+  #gallery .section_lights_bg .section_black_wire_2 {
+    bottom: -12px;
+    height: 20px;
+  }
+  #gallery .gallery-section__lights .gallery-section__led {
+    height: 74%;
+  }
+}
+
+@media (max-width: 767px) {
+  #gallery .section_lights_bg .section_electric_panel {
+    width: 140px;
+    height: 230px;
+  }
+  #gallery .section_lights_bg .section_measurer {
+    width: 140px;
+    height: 130px;
+  }
+  #gallery .section_lights_bg .section_measurer .section_digits {
+    top: 10px;
+    right: 15px;
+    font-size: 14px;
+  }
+  #gallery .gallery-section__lights .gallery-section__led {
+    margin-top: 329px;
+    height: 90%;
+  }
+  #gallery .section_lights_bg .section_black_wire {
+    top: -40px;
+  }
+  #gallery .section_lights_bg .section_black_wire_2 {
+    height: 18px;
+  }
+}
+
+@media (max-width: 535px) {
+  #gallery .gallery-section__lights .gallery-section__led {
+    height: 89%;
+  }
+}
+
+@media (max-width: 440px) {
+  #gallery .gallery-section__lights .gallery-section__led {
+    margin-top: 315px;
+    height: 87%;
+  }
+}
+
+@media (max-width: 380px) {
+  #gallery .gallery-section__lights .gallery-section__led {
+    margin-top: 305px;
+    height: 86%;
+  }
+}
+
+@media (max-width: 340px) {
+  #gallery .gallery-section__lights .gallery-section__led {
+    margin-top: 297px;
+    height: 85%;
+  }
+}
+
+@media (min-width: 1500px) {
+  #gallery .container {
+    padding: 0 80px;
+    position: relative;
+  }
+  #gallery .section_lights_bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  #gallery .section_lights_bg .section_electric_panel {
+    display: block;
+    position: absolute;
+    top: 150px;
+    left: -150px;
+  }
+  #gallery .section_lights_bg .section_black_wire {
+    top: -75px;
+    left: -65px;
+  }
+  #gallery .section_lights_bg .section_black_wire_2 {
+    top: 143px;
+    left: 177px;
+    height: 26px;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+  #gallery .section_lights_bg .section_measurer {
+    display: block;
+    float: none;
+    position: absolute;
+    top: 80px;
+    right: -145px;
+  }
+  #gallery .gallery-section__lights .gallery-section__led {
+    height: 105%;
+    margin-top: 0;
+  }
+  #gallery h1.wt-section-title {
+    padding-top: 0;
+  }
+  #gallery #links {
+    padding: 0;
+  }
 }
 
 #team {
@@ -777,12 +1368,22 @@ section#services .card .card-body a.btn .btn_icon {
   }
 }
 
+@media (min-width: 1200px) and (max-width: 1350px) {
+  #team .owl-carousel .owl-nav .owl-prev {
+    left: 0;
+  }
+  #team .owl-carousel .owl-nav .owl-next {
+    right: 0;
+  }
+}
+
 #process .plyr__video-embed, #testimonials-video .plyr__video-embed {
   padding-bottom: 56.25% !important;
 }
 
 #advantages {
   position: relative;
+  z-index: 2;
 }
 
 #advantages .wt-background-advImg {
@@ -882,7 +1483,7 @@ section#services .card .card-body a.btn .btn_icon {
   background-color: #ff8989;
 }
 
-@media (min-width: 320px) and (max-width: 374px) {
+@media (min-width: 320px) and (max-width: 375px) {
   #advantages .proscons_block_list {
     -webkit-transform: translateX(118%);
     transform: translateX(118%);
@@ -1017,6 +1618,15 @@ section#services .card .card-body a.btn .btn_icon {
   }
   #testimonials .owl-carousel .owl-dots {
     display: none !important;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1350px) {
+  #testimonials .owl-carousel .owl-nav .owl-prev {
+    left: 0;
+  }
+  #testimonials .owl-carousel .owl-nav .owl-next {
+    right: 0;
   }
 }
 
