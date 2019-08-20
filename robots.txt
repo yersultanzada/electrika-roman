@@ -1,4 +1,3 @@
 ﻿User-agent: *
-Allow: /
-
+Disallow:
 Sitemap: https://electric-kizmeter.kz/sitemap.xml
