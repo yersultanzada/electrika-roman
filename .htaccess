@@ -15,3 +15,15 @@ RewriteRule ^(.*)$ http://%1/$1 [L,R=301]
  BrowserMatch bMSIE !no-gzip !gzip-only-text/html
  </IfModule>
 </IfModule>
+
+## EXPIRES CACHING ##
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/gif "access plus 6 months"
+ExpiresByType image/jpeg "access plus 6 months"
+ExpiresByType image/png "access plus 6 months"
+ExpiresByType text/css "access plus 1 year"
+ExpiresByType text/javascript "access plus 6 months"
+ExpiresByType application/javascript "access plus 6 months"
+</IfModule>
+## EXPIRES CACHING ##

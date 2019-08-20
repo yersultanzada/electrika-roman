@@ -589,7 +589,7 @@ section#services .services-section__electric .services-section__wires .services-
   top: 0;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  width: 279px;
+  width: 240px;
   height: 120px;
   -webkit-transition: -webkit-filter .2s;
   transition: -webkit-filter .2s;
@@ -602,7 +602,7 @@ section#services .services-section__electric .services-section__wires .services-
 }
 
 section#services .services-section__electric .services-section__wires .services-section__lights .services-section__light-right {
-  right: -271px;
+  right: -232px;
 }
 
 section#services .services-section__electric .services-section__wires .services-section__lights .services-section__light-left--on, section#services .services-section__electric .services-section__wires .services-section__lights .services-section__light-right--on {
@@ -725,17 +725,17 @@ section#services .card .card-body a.btn .btn_icon {
 
 @media (max-width: 1500px) {
   section#services .services-section__electric .services-section__wires {
-    width: 1200px;
+    width: 1262px;
   }
   section#services .services-section__electric .services-section__wires .services-section__lights {
-    top: 350px;
+    top: 370px;
   }
   section#services .services-section__electric .services-section__wires .services-section__lights .services-section__light-left {
     left: 82px;
   }
   section#services .services-section__electric .services-section__wires .services-section__splitter {
-    top: 525px;
-    left: 53px;
+    top: 554px;
+    left: 54px;
   }
   section#services .services-section__electric .services-section__wires .services-section__black-wire {
     left: 75px;
@@ -744,16 +744,16 @@ section#services .card .card-body a.btn .btn_icon {
 
 @media (max-width: 1400px) {
   section#services .services-section__electric .services-section__wires {
-    width: 1100px;
+    width: 1150px;
   }
   section#services .services-section__electric .services-section__wires .services-section__lights {
     top: 315px;
   }
   section#services .services-section__electric .services-section__wires .services-section__lights .services-section__light-right {
-    right: -274px;
+    right: -234px;
   }
   section#services .services-section__electric .services-section__wires .services-section__splitter {
-    top: 478px;
+    top: 504px;
   }
   section#services .container {
     padding: 0 160px;
@@ -765,14 +765,26 @@ section#services .card .card-body a.btn .btn_icon {
 
 @media (max-width: 1300px) {
   section#services .services-section__electric .services-section__wires {
-    width: 1050px;
+    width: 1140px;
+  }
+  section#services .services-section__electric .services-section__wires .services-section__lights {
+    top: 325px;
   }
   section#services .services-section__electric .services-section__wires .services-section__lights .services-section__light-left {
-    width: 230px;
+    width: 200px;
   }
   section#services .services-section__electric .services-section__wires .services-section__lights .services-section__light-right {
-    right: -224px;
-    width: 230px;
+    right: -194px;
+    width: 200px;
+  }
+  section#services .services-section__electric .services-section__wires .services-section__splitter {
+    top: 498px;
+  }
+}
+
+@media (max-width: 1278px) {
+  section#services .services-section__electric .services-section__wires {
+    width: 1050px;
   }
   section#services .services-section__electric .services-section__wires .services-section__splitter {
     top: 457px;
@@ -843,7 +855,7 @@ section#services .card .card-body a.btn .btn_icon {
     left: 4.5vw;
   }
   section#services .container {
-    padding: 0 80px;
+    padding: 0 200px;
   }
   section#services h1 {
     text-shadow: 0 0 7px rgba(0, 0, 0, 0.35);
@@ -870,6 +882,12 @@ section#services .card .card-body a.btn .btn_icon {
   }
   section#services .services-section__electric .services-section__wires .services-section__black-wire {
     top: 24vw;
+  }
+}
+
+@media (max-width: 768px) {
+  section#services .container {
+    padding: 0 100px;
   }
 }
 

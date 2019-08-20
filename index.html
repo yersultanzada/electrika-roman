@@ -16,18 +16,122 @@
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap&subset=cyrillic" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Bad+Script&display=swap&subset=cyrillic" rel="stylesheet">
-
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap&subset=cyrillic" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap&subset=cyrillic"></noscript>
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Bad+Script&display=swap&subset=cyrillic" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bad+Script&display=swap&subset=cyrillic"></noscript>
     <!-- Custom styles for the owlCarousel -->
     <link href="vendor/owlCarousel/css/owl.carousel.min.css" rel="stylesheet">
     <link href="vendor/owlCarousel/css/owl.theme.default.min.css" rel="stylesheet">
-
-    <!-- Custom styles for the gallery -->
-    <link href="vendor/blueimp-gallery/css/blueimp-gallery.min.css" rel="stylesheet">
-
+      <!-- Custom styles for the gallery -->
+    <link rel="preload" href="vendor/blueimp-gallery/css/blueimp-gallery.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="vendor/blueimp-gallery/css/blueimp-gallery.min.css"></noscript>
     <!-- Custom styles for this project -->
     <link href="css/project.min.css" rel="stylesheet">
+      <script>
+        /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
+        /* This file is meant as a standalone workflow for
+        - testing support for link[rel=preload]
+        - enabling async CSS loading in browsers that do not support rel=preload
+        - applying rel preload css once loaded, whether supported or not.
+        */
+        (function( w ){
+            "use strict";
+            // rel=preload support test
+            if( !w.loadCSS ){
+                w.loadCSS = function(){};
+            }
+            // define on the loadCSS obj
+            var rp = loadCSS.relpreload = {};
+            // rel=preload feature support test
+            // runs once and returns a function for compat purposes
+            rp.support = (function(){
+                var ret;
+                try {
+                    ret = w.document.createElement( "link" ).relList.supports( "preload" );
+                } catch (e) {
+                    ret = false;
+                }
+                return function(){
+                    return ret;
+                };
+            })();
+
+            // if preload isn't supported, get an asynchronous load by using a non-matching media attribute
+            // then change that media back to its intended value on load
+            rp.bindMediaToggle = function( link ){
+                // remember existing media attr for ultimate state, or default to 'all'
+                var finalMedia = link.media || "all";
+
+                function enableStylesheet(){
+                    link.media = finalMedia;
+                }
+
+                // bind load handlers to enable media
+                if( link.addEventListener ){
+                    link.addEventListener( "load", enableStylesheet );
+                } else if( link.attachEvent ){
+                    link.attachEvent( "onload", enableStylesheet );
+                }
+
+                // Set rel and non-applicable media type to start an async request
+                // note: timeout allows this to happen async to let rendering continue in IE
+                setTimeout(function(){
+                    link.rel = "stylesheet";
+                    link.media = "only x";
+                });
+                // also enable media after 3 seconds,
+                // which will catch very old browsers (android 2.x, old firefox) that don't support onload on link
+                setTimeout( enableStylesheet, 3000 );
+            };
+
+            // loop through link elements in DOM
+            rp.poly = function(){
+                // double check this to prevent external calls from running
+                if( rp.support() ){
+                    return;
+                }
+                var links = w.document.getElementsByTagName( "link" );
+                for( var i = 0; i < links.length; i++ ){
+                    var link = links[ i ];
+                    // qualify links to those with rel=preload and as=style attrs
+                    if( link.rel === "preload" && link.getAttribute( "as" ) === "style" && !link.getAttribute( "data-loadcss" ) ){
+                        // prevent rerunning on link
+                        link.setAttribute( "data-loadcss", true );
+                        // bind listeners to toggle media back
+                        rp.bindMediaToggle( link );
+                    }
+                }
+            };
+
+            // if unsupported, run the polyfill
+            if( !rp.support() ){
+                // run once at least
+                rp.poly();
+
+                // rerun poly on an interval until onload
+                var run = w.setInterval( rp.poly, 500 );
+                if( w.addEventListener ){
+                    w.addEventListener( "load", function(){
+                        rp.poly();
+                        w.clearInterval( run );
+                    } );
+                } else if( w.attachEvent ){
+                    w.attachEvent( "onload", function(){
+                        rp.poly();
+                        w.clearInterval( run );
+                    } );
+                }
+            }
+            // commonjs
+            if( typeof exports !== "undefined" ){
+                exports.loadCSS = loadCSS;
+            }
+            else {
+                w.loadCSS = loadCSS;
+            }
+        }( typeof global !== "undefined" ? global : this ) );
+    </script>
   </head>
 
   <body id="page-top">
@@ -101,10 +205,10 @@
                           <div class="col-lg-12">
                             <div class="intro_text text-center">
                               <div class="wt-section-heroTitle text-white mb-4">
-                                15 лет назад мы начали осуществлять эту очень интересную,но в то же время очень ответственную работу
+                                15 лет назад мы начали осуществлять эту очень интересную, но в то же время очень ответственную работу
                               </div>
                               <p class="wt-section-subheading text-white mb-4">
-                                На нашем сайте вы можете увидеть фото наших работ,а также видео процесса производства работ.
+                                На нашем сайте вы можете увидеть фото наших работ, а также видео процесса производства работ.
                               </p>
                               <div class="block_buttons">
                                 <a href="#gallery" class="btn wt-btn-primary wt-btn-size-md wt-btn-rounded mb-3">Посмотреть работы</a>
@@ -125,10 +229,10 @@
                                 <div class="col-lg-12">
                                     <div class="intro_text text-center">
                                         <div class="wt-section-heroTitle text-white mb-4">
-                                            Наша задача - стараться  оказывать услуги высокого качества
+                                            Наша задача - оказывать услуги высокого качества
                                         </div>
                                         <p class="wt-section-subheading text-white mb-4">
-                                            Относится добросовестно к работе,и оправдать оказанное доверие.На фото установленная подвесная люстра в квартире.Г. Алматы ЖК «Вавилон».,Розыбакиева 247.,блок 4.
+                                            Относиться добросовестно к работе и оправдать оказанное доверие. На фото - установленная подвесная люстра в г.Алматы, ЖК «Вавилон», ул.Розыбакиева 247, блок 4.
                                         </p>
                                         <div class="block_buttons">
                                             <a href="#gallery" class="btn wt-btn-primary wt-btn-size-md wt-btn-rounded mb-3">Посмотреть работы</a>
@@ -155,10 +259,10 @@
               <strong>Специалисты компании «ЭЛСИ ПРОФМОНТАЖ»</strong> выполняют электромонтажные работы с учетом всех действующих норм и стандартов, что гарантирует безупречное качество полученного результата после завершения.
             </p>
             <p class="wt-section-text">
-              Поэтому если Вы нуждаетесь в услугах электрика в Алматы по приемлемой цене, который быстро и качественно выполнит монтаж кабеля и внешних электрических сетей, а также других систем, обращайтесь именно к нам. Кроме этого, нашими преимуществами являются:
+              Поэтому, если Вы нуждаетесь в услугах электрика в Алматы по приемлемой цене, который быстро и качественно выполнит монтаж кабеля и внешних электрических сетей, а также других систем, обращайтесь именно к нам. Кроме этого, нашими преимуществами являются:
             </p>
             <ul>
-              <li><strong>Оперативность</strong> – нет необходимости ожидать много времени на реализацию работы;</li>
+              <li><strong>Оперативность</strong> – нет необходимости в долгом ожидании реализации работы;</li>
               <li><strong>Широкий спектр услуг</strong> – установка люстр, осветительных приборов, прокладка кабеля и пр.;</li>
               <li><strong>Обоснованная стоимость монтажных и других мероприятий</strong> – на работу электрика цены в Алматы установлены на демократичном уровне;</li>
               <li><strong>Быстрая реакция на поступившую заявку</strong> – наши услуги выполняются в самые сжатые сроки, поскольку необходимо уточнить всего несколько деталей.</li>
@@ -197,10 +301,10 @@
           </div>
           <div class="col-lg-6 col-xl-4">
             <div class="card">
-              <img src="img/services/ser1.jpeg" class="card-img-top" alt="Монтаж кабеля">
+              <img data-src="img/services/ser1.jpeg" class="card-img-top" alt="Монтаж кабеля">
               <div class="card-body">
                 <h2 class="card-title">Монтаж кабеля</h2>
-                <p class="card-text">Кабельные линии прокладывают так, чтобы при их эксплуатации исключалась возможность возникновения опасных механических напряжений и повреждений. Компания «ЭЛСИ профмонтаж» соблюдает все нормы,СНИПы и ГОСТы.</p>
+                <p class="card-text">Кабельные линии прокладывают так, чтобы при их эксплуатации исключалась возможность возникновения опасных механических напряжений и повреждений. Компания «ЭЛСИ профмонтаж» соблюдает все нормы, СНИПы и ГОСТы.</p>
                 <div class="row">
                   <div class="col-6">
                     <div class="card_price">Цена:</div>
@@ -215,7 +319,7 @@
           </div>
           <div class="col-lg-6 col-xl-4">
             <div class="card">
-              <img src="img/services/ser2.jpeg" class="card-img-top" alt="Установка подрозетников">
+              <img data-src="img/services/ser2.jpeg" class="card-img-top" alt="Установка подрозетников">
               <div class="card-body">
                 <h2 class="card-title">Установка подрозетников</h2>
                 <p class="card-text">в кирпич, газоблок, гипсокартон</p>
@@ -233,10 +337,10 @@
           </div>
           <div class="col-lg-6 col-xl-4">
             <div class="card">
-              <img src="img/services/ser3.jpeg" class="card-img-top" alt="Установка подрозетников в бетон">
+              <img data-src="img/services/ser3.jpeg" class="card-img-top" alt="Установка подрозетников в бетон">
               <div class="card-body">
                 <h2 class="card-title">Установка подрозетников в бетон</h2>
-                <p class="card-text">Подрозетники по бетону — применяються для установки в бетон, кирпич, пенобетон, газобетон, блоки изготовленные из керамзита. Монтаж подрозетника производится в заранее подготовленное отверстие путем фиксации его раствором гипса или алебастра.</p>
+                <p class="card-text">Подрозетники по бетону применяются для установки в бетон, кирпич, пенобетон, газобетон, блоки, изготовленные из керамзита. Монтаж подрозетника производится в заранее подготовленное отверстие путем фиксации его раствором гипса или алебастра.</p>
                 <div class="row">
                   <div class="col-6">
                     <div class="card_price">Цена:</div>
@@ -252,7 +356,7 @@
 
           <div class="col-lg-6 col-xl-4">
             <div class="card">
-              <img src="img/services/ser4.jpeg" class="card-img-top" alt="Установка светильников">
+              <img data-src="img/services/ser4.jpeg" class="card-img-top" alt="Установка светильников">
               <div class="card-body">
                 <h2 class="card-title">Установка светильников</h2>
                 <p class="card-text"></p>
@@ -270,7 +374,7 @@
           </div>
           <div class="col-lg-6 col-xl-4">
             <div class="card">
-              <img src="img/services/ser5.jpeg" class="card-img-top" alt="Устройство щитов всех типов">
+              <img data-src="img/services/ser5.jpeg" class="card-img-top" alt="Устройство щитов всех типов">
               <div class="card-body">
                 <h2 class="card-title">Устройство щитов всех типов</h2>
                 <p class="card-text">Монтаж распределительного щита — одна из важных работ, которая должна проводиться на основании подробной наглядной или электрической схемы после распределения потребителей на группы и выполнения необходимых расчетов.</p>
@@ -288,7 +392,7 @@
           </div>
           <div class="col-lg-6 col-xl-4">
             <div class="card">
-              <img src="img/services/ser6.jpg" class="card-img-top" alt="Монтаж концевой муфты">
+              <img data-src="img/services/ser6.jpg" class="card-img-top" alt="Монтаж концевой муфты">
               <div class="card-body">
                 <h2 class="card-title">Монтаж концевой муфты</h2>
                 <p class="card-text">Кабельную соединительную муфту монтируют в строгом соответствии с инструкцией и с соблюдением правил техники безопасности и пожарной безопасности.</p>
@@ -307,10 +411,10 @@
 
           <div class="col-lg-6 col-xl-4">
             <div class="card">
-              <img src="img/services/ser7.jpg" class="card-img-top" alt="Установка трековых светильников (на шинопроводе)">
+              <img data-src="img/services/ser7.jpg" class="card-img-top" alt="Установка трековых светильников (на шинопроводе)">
               <div class="card-body">
                 <h2 class="card-title">Установка трековых светильников (на шинопроводе)</h2>
-                <p class="card-text">Сегодня трековым светильникам удалось стать достаточно популярным видом освещения.Трековые светильники стали незаменимым атрибутом крупных торговых залов,небольших бутиков,Кафе и магазинов.</p>
+                <p class="card-text">Сегодня трековым светильникам удалось стать достаточно популярным видом освещения. Трековые светильники стали незаменимым атрибутом крупных торговых залов, небольших бутиков, кафе и магазинов.</p>
                 <div class="row">
                   <div class="col-6">
                     <div class="card_price">Цена:</div>
@@ -325,7 +429,7 @@
           </div>
           <div class="col-lg-6 col-xl-4">
             <div class="card">
-              <img src="img/services/ser8.jpeg" class="card-img-top" alt="Установка точечных светильников-спотов">
+              <img data-src="img/services/ser8.jpeg" class="card-img-top" alt="Установка точечных светильников-спотов">
               <div class="card-body">
                 <h2 class="card-title">Установка точечных светильников-спотов</h2>
                 <p class="card-text">Spot-с английского переводится пятно. Потолочные светильники споты также являются элементами интерьера, позволяющими оформить освещение в помещении в соответствии с современными дизайнерскими трендами.</p>
@@ -343,7 +447,7 @@
           </div>
           <div class="col-lg-6 col-xl-4">
             <div class="card">
-              <img src="img/services/ser9.jpeg" class="card-img-top" alt="Устройство светодиодной подсветки">
+              <img data-src="img/services/ser9.jpeg" class="card-img-top" alt="Устройство светодиодной подсветки">
               <div class="card-body">
                 <h2 class="card-title">Устройство светодиодной подсветки</h2>
                 <p class="card-text">Светодиодная лента – настоящая сенсация современного рынка светотехники. Светодиодная лента — это осветительный модуль на гибкой основе с нанесенными на нее токопроводящими дорожками, светодиодами и резисторами.</p>
@@ -362,10 +466,10 @@
 
           <div class="col-lg-6 col-xl-4">
             <div class="card">
-              <img src="img/services/ser10.jpeg" class="card-img-top" alt="Установка люстр">
+              <img data-src="img/services/ser10.jpeg" class="card-img-top" alt="Установка люстр">
               <div class="card-body">
                 <h2 class="card-title">Установка люстр</h2>
-                <p class="card-text">Люстра - это не только осветительный прибор и предмет интерьера,но и элемент для создания завершённого интерьера. По типу конструкции делятся на подвесные и потолочные. За несколько лет работы,мы накопили определённый опыт по сборке и установке.</p>
+                <p class="card-text">Люстра - это не только осветительный прибор и предмет интерьера, но и элемент для создания завершённого интерьера. По типу конструкции люстры делятся на подвесные и потолочные. За несколько лет работы мы накопили определённый опыт по сборке и установке.</p>
                 <div class="row">
                   <div class="col-6">
                     <div class="card_price">Цена:</div>
@@ -380,10 +484,10 @@
           </div>
           <div class="col-lg-6 col-xl-4">
             <div class="card">
-              <img src="img/services/ser12.jpg" class="card-img-top" alt="Устройство штробы">
+              <img data-src="img/services/ser12.jpg" class="card-img-top" alt="Устройство штробы">
               <div class="card-body">
                 <h2 class="card-title">Устройство штробы</h2>
-                <p class="card-text">Устройство штробы или штробление-очень трудоёмкий и тяжёлый процесс.Устройство штробы может производиться по стенам,потолку и полу. Глубина борозды не должна превышать одной трети толщины в месте устраиваемой штробы.</p>
+                <p class="card-text">Устройство штробы или штробление - очень трудоёмкий и тяжёлый процесс. Устройство штробы может производиться по стенам, потолку и полу. Глубина борозды не должна превышать одной трети толщины в месте устраиваемой штробы.</p>
                 <div class="row">
                   <div class="col-6">
                     <div class="card_price">Цена:</div>
@@ -398,7 +502,7 @@
           </div>
           <div class="col-lg-6 col-xl-4">
             <div class="card">
-              <img src="img/services/ser11.jpg" class="card-img-top" alt="Внешние сети">
+              <img data-src="img/services/ser11.jpg" class="card-img-top" alt="Внешние сети">
               <div class="card-body">
                 <h2 class="card-title">Внешние сети</h2>
                 <p class="card-text mb-0">Внешние электрические сети</p>
@@ -430,7 +534,7 @@
         <div class="row">
           <div class="col-lg-3 timer_text">
             <div>
-              Мы вам перезвоним в течении <strong>1 минуты</strong>
+              Мы вам перезвоним в течение <strong>1 минуты</strong>
             </div>
           </div>
           <div class="col-lg-7 offset-lg-2">
@@ -465,13 +569,13 @@
           </div>
           <div class="col-lg-6 text-center mb-5">
             <div class="mx-auto mb-4">
-              <img src="img/advantages/check-icon_green.svg" alt="плюсы" class="adv_check">
+              <img data-src="img/advantages/check-icon_green.svg" alt="плюсы" class="adv_check">
             </div>
             <div class="proscons_block_list">
               <div class="proscons_list_start"></div>
               <div class="proscons_list_item">
                 <div class="proscons_list_icon">
-                  <img src="img/advantages/car-icon_green.svg" alt="бесплатный выезд">
+                  <img data-src="img/advantages/car-icon_green.svg" alt="бесплатный выезд">
                 </div>
                 <div class="proscons_list_text">
                   Бесплатный выезд
@@ -479,7 +583,7 @@
               </div>
               <div class="proscons_list_item">
                 <div class="proscons_list_icon">
-                  <img src="img/advantages/quality-icon_green.svg" alt="Гарантия качества">
+                  <img data-src="img/advantages/quality-icon_green.svg" alt="Гарантия качества">
                 </div>
                 <div class="proscons_list_text">
                   Гарантия качества
@@ -487,10 +591,10 @@
               </div>
               <div class="proscons_list_item">
                 <div class="proscons_list_icon">
-                  <img src="img/advantages/clock-icon_green.svg" alt=" Работа выполненная в срок">
+                  <img data-src="img/advantages/clock-icon_green.svg" alt=" Работа выполненная в срок">
                 </div>
                 <div class="proscons_list_text">
-                  Работа выполненная<br> в срок
+                  Работа, выполненная<br> в срок
                 </div>
               </div>
               <div class="proscons_list_end"></div>
@@ -498,13 +602,13 @@
           </div>
           <div class="col-lg-6 text-center proscons_red">
             <div class="mx-auto mb-4">
-              <img src="img/advantages/close-icon_red.svg" alt="минусы" class="adv_check">
+              <img data-src="img/advantages/close-icon_red.svg" alt="минусы" class="adv_check">
             </div>
             <div class="proscons_block_list">
               <div class="proscons_list_start"></div>
               <div class="proscons_list_item">
                 <div class="proscons_list_icon">
-                  <img src="img/advantages/warning-icon_red.png" alt="Предоставление заведомо ложной информации">
+                  <img data-src="img/advantages/warning-icon_red.png" alt="Предоставление заведомо ложной информации">
                 </div>
                 <div class="proscons_list_text">
                   Предоставление заведомо ложной информации
@@ -512,7 +616,7 @@
               </div>
               <div class="proscons_list_item">
                 <div class="proscons_list_icon">
-                  <img src="img/advantages/sad-smile-icon_red.png" alt="Низкий уровень обслуживания">
+                  <img data-src="img/advantages/sad-smile-icon_red.png" alt="Низкий уровень обслуживания">
                 </div>
                 <div class="proscons_list_text">
                   Низкий уровень обслуживания
@@ -520,7 +624,7 @@
               </div>
               <div class="proscons_list_item">
                 <div class="proscons_list_icon">
-                  <img src="img/advantages/time-overdue-icon_red.png" alt="Срыв сроков">
+                  <img data-src="img/advantages/time-overdue-icon_red.png" alt="Срыв сроков">
                 </div>
                 <div class="proscons_list_text">
                   Срыв сроков
@@ -570,33 +674,33 @@
             </div>
             <div class="col-md-6 col-lg-4 mb-4">
               <a href="img/gallery/gal1.jpg" title="">
-                <img src="img/gallery/mini/gal1-mini.jpg" class="w-100" alt="монтаж кабеля">
+                <img data-src="img/gallery/mini/gal1-mini.jpg" class="w-100" alt="монтаж кабеля">
               </a>
             </div>
             <div class="col-md-6 col-lg-4 mb-4">
               <a href="img/gallery/gal2.jpg" title="">
-                <img src="img/gallery/mini/gal2-mini.jpg" class="w-100" alt="электрик в Алматы">
+                <img data-src="img/gallery/mini/gal2-mini.jpg" class="w-100" alt="электрик в Алматы">
               </a>
             </div>
             <div class="col-md-6 col-lg-4 mb-4">
               <a href="img/gallery/gal3.jpg" title="">
-                <img src="img/gallery/mini/gal3-mini.jpg" class="w-100" alt="услуга электрика">
+                <img data-src="img/gallery/mini/gal3-mini.jpg" class="w-100" alt="услуга электрика">
               </a>
             </div>
 
             <div class="col-md-6 col-lg-4 mb-4">
               <a href="img/gallery/gal4.jpg" title="">
-                <img src="img/gallery/mini/gal4-mini.jpg" class="w-100" alt="услуга электрика цены">
+                <img data-src="img/gallery/mini/gal4-mini.jpg" class="w-100" alt="услуга электрика цены">
               </a>
             </div>
             <div class="col-md-6 col-lg-4 mb-4">
               <a href="img/gallery/gal5.jpg" title="">
-                <img src="img/gallery/mini/gal5-mini.jpg" class="w-100" alt="установка светильников">
+                <img data-src="img/gallery/mini/gal5-mini.jpg" class="w-100" alt="установка светильников">
               </a>
             </div>
             <div class="col-md-6 col-lg-4">
               <a href="img/gallery/gal6.jpg" title="">
-                <img src="img/gallery/mini/gal6-mini.jpg" class="w-100" alt="установка люстры">
+                <img data-src="img/gallery/mini/gal6-mini.jpg" class="w-100" alt="установка люстры">
               </a>
             </div>
           </div>
@@ -622,7 +726,7 @@
               <div class="team_item_card">
                 <div class="team_item_photo text-center">
                   <div class="team_item_cable master_item_cable1"></div>
-                  <img class="team_item_image" src="img/team/master1.jpg" alt="Олег Александрович">
+                  <img data-src="img/team/master1.jpg" class="team_item_image" alt="Олег Александрович">
                 </div>
                 <div class="team_item_desc">
                   <div class="team_item_name">
@@ -638,7 +742,7 @@
               <div class="team_item_card">
                 <div class="team_item_photo text-center">
                   <div class="team_item_cable master_item_cable2"></div>
-                  <img class="team_item_image" src="img/team/master2.jpg" alt="Станислав">
+                  <img data-src="img/team/master2.jpg" class="team_item_image" alt="Станислав">
                 </div>
                 <div class="team_item_desc">
                   <div class="team_item_name">
@@ -654,7 +758,7 @@
               <div class="team_item_card">
                 <div class="team_item_photo text-center">
                   <div class="team_item_cable master_item_cable3"></div>
-                  <img class="team_item_image" src="img/team/master3.jpg" alt="Серик">
+                  <img data-src="img/team/master3.jpg" class="team_item_image" alt="Серик">
                 </div>
                 <div class="team_item_desc">
                   <div class="team_item_name">
@@ -670,7 +774,7 @@
               <div class="team_item_card">
                 <div class="team_item_photo text-center">
                   <div class="team_item_cable master_item_cable2"></div>
-                  <img class="team_item_image" src="img/team/master4.jpg" alt="Игорь">
+                  <img data-src="img/team/master4.jpg" class="team_item_image" alt="Игорь">
                 </div>
                 <div class="team_item_desc">
                   <div class="team_item_name">
@@ -686,7 +790,7 @@
               <div class="team_item_card">
                 <div class="team_item_photo text-center">
                   <div class="team_item_cable master_item_cable1"></div>
-                  <img class="team_item_image" src="img/team/master5.jpg" alt="Андрей">
+                  <img data-src="img/team/master5.jpg" class="team_item_image" alt="Андрей">
                 </div>
                 <div class="team_item_desc">
                   <div class="team_item_name">
@@ -702,7 +806,7 @@
               <div class="team_item_card">
                 <div class="team_item_photo text-center">
                   <div class="team_item_cable master_item_cable3"></div>
-                  <img class="team_item_image" src="img/team/master6.jpg" alt="Игорь">
+                  <img data-src="img/team/master6.jpg" class="team_item_image" alt="Игорь">
                 </div>
                 <div class="team_item_desc">
                   <div class="team_item_name">
@@ -757,7 +861,7 @@
         <div class="row">
           <div class="col-lg-3 timer_text">
             <div>
-              Мы вам перезвоним в течении <strong>1 минуты</strong>
+              Мы вам перезвоним в течение <strong>1 минуты</strong>
             </div>
           </div>
           <div class="col-lg-7 offset-lg-2">
@@ -916,7 +1020,7 @@
         <div class="row">
           <div class="col-lg-3 timer_text">
             <div>
-              Мы вам перезвоним в течении <strong>1 минуты</strong>
+              Мы вам перезвоним в течение <strong>1 минуты</strong>
             </div>
           </div>
           <div class="col-lg-7 offset-lg-2">
@@ -1019,13 +1123,13 @@
                 </div>
               </div>
             </div>
-            <img src="img/contacts/contacts-map.jpg" class="contacts_map" alt="адрес">
+            <img data-src="img/contacts/contacts-map.jpg" class="contacts_map" alt="адрес">
           </div>
         </div>
         <div class="row mt-5 text-center">
           <div class="col-12">
             <p class="wt-section-text text-white">
-              Если у Вас есть какие-либо вопросы касательно услуг электрика в Алматы, то просто свяжитесь с нашим специалистом по телефону, который даст на них исчерпывающие и компетентные ответы.
+              Если у Вас есть какие-либо вопросы касательно услуг электрика в Алматы, то просто свяжитесь по телефону с нашим специалистом, который даст на них исчерпывающие и компетентные ответы.
             </p>
           </div>
         </div>
@@ -1108,7 +1212,7 @@
               </ul>
             </div>
             <div class="request_btn">
-              <a class="btn wt-btn-primary wt-btn-size-sm wt-btn-rounded" href="#">Заказать звонок</a>
+              <a class="btn wt-btn-primary wt-btn-size-sm wt-btn-rounded js-scroll-trigger" href="#callToAction">Заказать звонок</a>
             </div>
           </div>
         </div>
@@ -1128,7 +1232,8 @@
 
     <!-- Bootstrap core JavaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyloadxt/1.1.0/jquery.lazyloadxt.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js" async></script>
     <script src="vendor/owlCarousel/js/owl.carousel.min.js"></script>
     <!-- Plugin JavaScript -->
     <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazy/1.7.1/jquery.lazy.min.js" async></script>
