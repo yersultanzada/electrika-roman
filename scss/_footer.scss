@@ -28,6 +28,14 @@ section#footer {
     color: lighten($primary, 50%);
   }
 }
+
+section.seo-text {
+  position: relative;
+  background-color: #fff;
+  a {
+    color: $gray-900;
+  }
+}
 @media (max-width: 767px) {
   section#footer a.nav-link {
     padding: .5rem 1rem;
