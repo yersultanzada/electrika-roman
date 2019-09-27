@@ -82,3 +82,17 @@ section#masthead {
     display: none;
   }
 }
+
+.inner_pages-masthead {
+  position: relative;
+  .wt-background-innerPagesImgAboutUs {
+    background:url(../img/about-us-bg.jpg) no-repeat 50% 50% / cover , #3c506f;
+  }
+  .wt-background-innerPagesOverlay {
+    background: rgba(49,81,101,.38);
+  }
+  .wt-section-heroTitle {
+    padding: 100px 0;
+    text-shadow: 0 0 7px rgba(0,0,0,.35)
+  }
+}
