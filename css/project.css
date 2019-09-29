@@ -507,7 +507,7 @@ section#masthead .owl-carousel .owl-dots .owl-dot.active span {
   position: relative;
 }
 
-.inner_pages-masthead .wt-background-innerPagesImgAboutUs {
+.inner_pages-masthead .wt-background-innerPagesImg {
   background: url(../img/about-us-bg.jpg) no-repeat 50% 50%/cover, #3c506f;
 }
 
@@ -516,8 +516,22 @@ section#masthead .owl-carousel .owl-dots .owl-dot.active span {
 }
 
 .inner_pages-masthead .wt-section-heroTitle {
-  padding: 100px 0;
+  position: relative;
+  padding: 30px 0;
   text-shadow: 0 0 7px rgba(0, 0, 0, 0.35);
+}
+
+.inner_pages-masthead .wt-section-heroTitle:after {
+  content: "";
+  position: absolute;
+  width: 45px;
+  height: 2px;
+  background-color: white;
+  left: 50%;
+  right: auto;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  bottom: 25px;
 }
 
 section#services {

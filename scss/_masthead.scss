@@ -85,14 +85,27 @@ section#masthead {
 
 .inner_pages-masthead {
   position: relative;
-  .wt-background-innerPagesImgAboutUs {
+  .wt-background-innerPagesImg {
     background:url(../img/about-us-bg.jpg) no-repeat 50% 50% / cover , #3c506f;
   }
   .wt-background-innerPagesOverlay {
     background: rgba(49,81,101,.38);
   }
   .wt-section-heroTitle {
-    padding: 100px 0;
-    text-shadow: 0 0 7px rgba(0,0,0,.35)
+    position: relative;
+    padding: 30px 0;
+    text-shadow: 0 0 7px rgba(0,0,0,.35);
+    &:after {
+      content: "";
+      position: absolute;
+      width: 45px;
+      height: 2px;
+      background-color: white;
+      left: 50%;
+      right: auto;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      bottom: 25px;
+    }
   }
 }
