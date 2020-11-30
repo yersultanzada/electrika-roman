@@ -282,6 +282,17 @@ img::-moz-selection {
   }
 }
 
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.mainNav-top {
+  background-color: #fff;
+}
+
 .mainNav-top img {
   width: 30px;
 }
