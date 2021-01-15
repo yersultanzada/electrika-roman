@@ -1,9 +1,87 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
-		<!--	created with www.mysitemapgenerator.com	-->
-		<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
 <url>
-	<loc>https://electric-kizmeter.kz/</loc>
-	<lastmod>2019-08-16T15:35:17+01:00</lastmod>
-	<priority>1.0</priority>
+  <loc>https://electric-kizmeter.kz/</loc>
+  <lastmod>2020-12-19T19:09:44+00:00</lastmod>
+  <priority>1.00</priority>
 </url>
+<url>
+  <loc>https://electric-kizmeter.kz/about_us.html</loc>
+  <lastmod>2020-11-30T09:51:40+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://electric-kizmeter.kz/prices.html</loc>
+  <lastmod>2020-11-30T09:56:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://electric-kizmeter.kz/services.html</loc>
+  <lastmod>2020-11-30T09:57:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://electric-kizmeter.kz/montaj-kabelya.html</loc>
+  <lastmod>2020-11-30T09:56:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://electric-kizmeter.kz/prokladka-kabelya.html</loc>
+  <lastmod>2020-11-30T09:56:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://electric-kizmeter.kz/montaj-muft.html</loc>
+  <lastmod>2020-11-30T09:56:02+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://electric-kizmeter.kz/ust-podrozetnikov.html</loc>
+  <lastmod>2020-11-30T09:59:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://electric-kizmeter.kz/ust-luistr.html</loc>
+  <lastmod>2020-11-30T09:58:24+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://electric-kizmeter.kz/ust-svetilnikov.html</loc>
+  <lastmod>2020-11-30T09:59:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://electric-kizmeter.kz/vnewnie-seti.html</loc>
+  <lastmod>2020-12-19T20:16:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://electric-kizmeter.kz/stroitelstvo-kl.html</loc>
+  <lastmod>2020-12-19T20:16:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://electric-kizmeter.kz/stroitelstvo-vl.html</loc>
+  <lastmod>2020-12-19T20:16:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://electric-kizmeter.kz/stroitelstvo-tp.html</loc>
+  <lastmod>2020-12-19T20:16:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://electric-kizmeter.kz/stroitelstvo-ktp.html</loc>
+  <lastmod>2020-12-19T20:16:20+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
 </urlset>
