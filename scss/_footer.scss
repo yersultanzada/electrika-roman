@@ -26,6 +26,9 @@ section#footer {
     margin-bottom: 0;
     padding-top: 15px;
     color: lighten($primary, 50%);
+    a:hover {
+      text-decoration: underline;
+    }
   }
 }
 

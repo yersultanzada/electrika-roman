@@ -1,6 +1,6 @@
 /*!
  * Start Bootstrap - Agency v5.0.2 (https://startbootstrap.com/template-overviews/agency)
- * Copyright 2013-2020 Start Bootstrap
+ * Copyright 2013-2021 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-agency/blob/master/LICENSE)
  */
 
@@ -1786,6 +1786,10 @@ section#footer .wt-section-small-text {
   margin-bottom: 0;
   padding-top: 15px;
   color: #c1e5fd;
+}
+
+section#footer .wt-section-small-text a:hover {
+  text-decoration: underline;
 }
 
 section.seo-text {
