@@ -15,10 +15,12 @@
     <meta http-equiv="pragma" content="no-cache">
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
     <!-- Custom styles for the owlCarousel -->
     <link href="vendor/owlCarousel/css/owl.carousel.min.css" rel="stylesheet">
     <link href="vendor/owlCarousel/css/owl.theme.default.min.css" rel="stylesheet">
     <!-- Custom styles for this project -->
+    <link href="css/video.min.css" rel="stylesheet">
     <link href="css/project.min.css" rel="stylesheet">
     <link rel="preload" href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap&subset=cyrillic" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap&subset=cyrillic"></noscript>
@@ -584,22 +586,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
           </div>
           <div class="col-lg-7 offset-lg-2">
-            <form id="contactForm" action="handler.php" method="post">
+            <form class="contact-form" id="contactForm" method="POST">
                 <div class="form-row">
                     <div class="col">
-                        <input type="text" class="form-control" placeholder="Ваше имя" name="name" minlength="2" maxlength="30" required>
+                        <input type="text" class="form-control contact-form__input contact-form__input_name" placeholder="Ваше имя *" name="name" minlength="2" maxlength="30" required>
                     </div>
                     <div class="col">
-                        <input type="tel" class="form-control phone" placeholder="Ваш телефон" name="phone" required>
+                        <input type="tel" class="form-control contact-form__input contact-form__input_tel tel" placeholder="Ваш телефон" name="tel" required>
                     </div>
                     <div class="col">
-                        <button type="submit" id="button" class="btn wt-btn-primary wt-btn-size-md wt-btn-rounded w-100">Заказать звонок</button>
-                        <div class="result">
-                          <span id="answer"></span>
-                          <span id="loader" style="display: none"><img src="img/loader.gif" alt="Загрузка подождите"></span>
-                        </div>
+                        <button type="submit" id="button" class="btn wt-btn-primary wt-btn-size-md wt-btn-rounded w-100 contact-form__button">
+                          <i class="fas fa-phone"></i>
+                          <span class="_preloader">
+                                    <i class="fas fa-spinner fa-spin fa-fw"></i>
+                                    <span class="sr-only">Loading...</span>
+                                </span>
+                          Заказать звонок
+                        </button>
                     </div>
                 </div>
+              <p class="contact-form__description text-center mt-3"></p>
             </form>
           </div>
         </div>
@@ -956,22 +962,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
           </div>
           <div class="col-lg-7 offset-lg-2">
-            <form id="contactForm_2" action="handler.php" method="post">
+            <form class="contact-form" id="contactForm_2" method="POST">
               <div class="form-row">
                 <div class="col">
-                  <input type="text" class="form-control" placeholder="Ваше имя" name="name" minlength="2" maxlength="30" required>
+                  <input type="text" class="form-control contact-form__input contact-form__input_name" placeholder="Ваше имя *" name="name" minlength="2" maxlength="30" required>
                 </div>
                 <div class="col">
-                  <input type="tel" class="form-control phone" placeholder="Ваш телефон" name="phone" required>
+                  <input type="tel" class="form-control contact-form__input contact-form__input_tel tel" placeholder="Ваш телефон *" name="tel" required>
                 </div>
                 <div class="col">
-                  <button type="submit" id="button_2" class="btn wt-btn-primary wt-btn-size-md wt-btn-rounded w-100">Заказать звонок</button>
-                  <div class="result">
-                    <span id="answer_2"></span>
-                    <span id="loader_2" style="display: none"><img src="img/loader.gif" alt="Загрузка подождите"></span>
-                  </div>
+                  <button type="submit" id="button_2" class="btn wt-btn-primary wt-btn-size-md wt-btn-rounded w-100 contact-form__button">
+                    <i class="fas fa-phone"></i>
+                    <span class="_preloader">
+                                    <i class="fas fa-spinner fa-spin fa-fw"></i>
+                                    <span class="sr-only">Loading...</span>
+                                </span>
+                    Заказать звонок
+                  </button>
                 </div>
               </div>
+              <p class="contact-form__description text-center mt-3"></p>
             </form>
           </div>
         </div>
@@ -1133,22 +1143,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
           </div>
           <div class="col-lg-7 offset-lg-2">
-            <form id="contactForm_3" action="handler.php" method="post">
+            <form class="contact-form" id="contactForm_3" method="POST">
               <div class="form-row">
                 <div class="col">
-                  <input type="text" class="form-control" placeholder="Ваше имя" name="name" minlength="2" maxlength="30" required>
+                  <input type="text" class="form-control contact-form__input contact-form__input_name" placeholder="Ваше имя *" name="name" minlength="2" maxlength="30" required>
                 </div>
                 <div class="col">
-                  <input type="tel" class="form-control phone" placeholder="Ваш телефон" name="phone" required>
+                  <input type="tel" class="form-control contact-form__input contact-form__input_tel tel" placeholder="Ваш телефон *" name="tel" required>
                 </div>
                 <div class="col">
-                  <button type="submit" id="button_3" class="btn wt-btn-white wt-btn-size-md wt-btn-rounded w-100">Заказать звонок</button>
-                  <div class="result">
-                    <span id="answer_3"></span>
-                    <span id="loader_3" style="display: none"><img src="img/loader.gif" alt="Загрузка подождите"></span>
-                  </div>
+                  <button type="submit" id="button_3" class="btn wt-btn-white wt-btn-size-md wt-btn-rounded w-100 contact-form__button">
+                    <i class="fas fa-phone"></i>
+                    <span class="_preloader">
+                                    <i class="fas fa-spinner fa-spin fa-fw"></i>
+                                    <span class="sr-only">Loading...</span>
+                                </span>
+                    Заказать звонок
+                  </button>
                 </div>
               </div>
+              <p class="contact-form__description text-center text-white mt-3"></p>
             </form>
           </div>
         </div>
@@ -1270,7 +1284,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <p class="wt-section-small-text mb-0"><a href="https://web-tech.kz/" target="_blank">Разработка сайта и продвижение</a> - Webtech</p>
           </div>
           <div class="col-md-6 p-0 text-right">
-            <p class="wt-section-small-text mb-0">© electric-kizmeter.kz - Все права защищены, 2019</p>
+            <p class="wt-section-small-text mb-0">© electric-kizmeter.kz - Все права защищены, 2021</p>
           </div>
         </div>
       </div>
@@ -1334,6 +1348,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <ol class="indicator"></ol>
     </div>
 
+    <div class="video-widget" data-state="default">
+        <div class="video-widget__container">
+          <video id="video-widget__video" loop="" autoplay="" playsinline="" preload="auto" muted="muted" controlslist="nodownload" disablepictureinpicture="" class="video-widget__video" src="img/video.mp4">
+            <source src="img/video.mp4" type="video/mp4">
+          </video>
+          <div class="video-widget__close"></div>
+          <a class="video-widget__button js-scroll-trigger" href="#callToAction">Оставить заявку</a>
+        </div>
+    </div>
     <!-- Bootstrap core JavaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyloadxt/1.1.0/jquery.lazyloadxt.min.js"></script>
@@ -1342,12 +1365,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- Plugin JavaScript -->
     <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazy/1.7.1/jquery.lazy.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazy/1.7.1/plugins/jquery.lazy.youtube.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+    <script src="vendor/jquery/mask.js"></script>
     <script src="vendor/blueimp-gallery/js/blueimp-gallery.min.js" async></script>
     <script src="vendor/jquery-easing/jquery.easing.min.js" async></script>
 
     <!-- Custom scripts for this project -->
+    <script src="js/video.min.js" async></script>
     <script src="js/project.min.js" async></script>
+    <script src="mail/js/mail.js" async></script>
     <script async>
         document.getElementById('links').onclick = function (event) {
             event = event || window.event;

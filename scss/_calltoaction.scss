@@ -14,9 +14,7 @@
       height: 50px;
       position: absolute;
       left: 15px;
-      top: 50%;
-      -webkit-transform: translateY(-50%);
-      transform: translateY(-50%);
+      top: 0;
     }
   }
   form#contactForm,form#contactForm_2,form#contactForm_3 {
@@ -30,29 +28,8 @@
       }
       button {
         min-width: 217px;
-        &:before {
-          content: "";
-          background: url(../img/calltoaction/phone-icon_white.svg) no-repeat;
-          background-size: 100%;
-          width: 20px;
-          height: 20px;
-          position: absolute;
-          left: 25px;
-          top: 50%;
-          -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-        }
-      }
-      .result {
-        position: absolute;
-        left: 15px;
-        #answer, #answer2 {
-          font-size: 14px;
-          color: $main-text;
-        }
-        #answer_3 {
-          font-size: 14px;
-          color: white;
+        i {
+          margin-right: 10px;
         }
       }
     }
@@ -63,11 +40,6 @@
       color: white;
       &:before {
         background: url(../img/calltoaction/clock-icon_white.svg) no-repeat;
-      }
-    }
-    form#contactForm_3 {
-      button:before {
-        background: url(../img/calltoaction/phone-icon_blue.svg) no-repeat;
       }
     }
   }
