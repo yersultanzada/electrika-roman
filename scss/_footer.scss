@@ -38,6 +38,14 @@ section.seo-text {
   a {
     color: $gray-900;
   }
+  #links {
+    .gallery-desc {
+      font-size: 12px;
+      line-height: 1.2;
+      text-align: center;
+      margin-top: 20px;
+    }
+  }
 }
 @media (max-width: 767px) {
   section#footer a.nav-link {
