@@ -38,6 +38,9 @@ section.seo-text {
   a {
     color: $gray-900;
   }
+  ul li a {
+    text-decoration: underline;
+  }
   #links {
     .gallery-desc {
       font-size: 12px;
