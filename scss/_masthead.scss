@@ -83,6 +83,9 @@ section#masthead {
     .wt-background-innerPagesImg {
       background:url(../img/inner/tp-bg.jpeg) no-repeat 50% 70% / cover , #3c506f;
     }
+    .wt-background-innerPagesOverlay {
+      background: rgba(3,3,3,.5);
+    }
   }
 }
 
