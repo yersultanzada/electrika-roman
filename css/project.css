@@ -274,6 +274,9 @@ img::-moz-selection {
   section p.wt-section-subheading {
     font-size: 18px;
   }
+  .seo-text h2 {
+    font-size: 1.5rem;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -298,14 +301,6 @@ header {
   z-index: 999;
 }
 
-.mainNav-top {
-  background-color: #fff;
-}
-
-.mainNav-top img {
-  width: 30px;
-}
-
 #mainNav {
   background: url(../img/menu-bg.jpg) no-repeat 50% 50%/cover, #3c506f;
   padding: 0;
@@ -316,9 +311,14 @@ header {
   margin-right: 0;
 }
 
+#mainNav .navbar-brand img {
+  width: 70px;
+  padding: 10px 0;
+}
+
 #mainNav .burger_menu {
   float: right;
-  padding-top: 40px;
+  padding-top: 30px;
   padding-right: 10px;
   color: #fff;
 }
@@ -329,8 +329,12 @@ header {
 
 #mainNav ul.list-inline {
   position: relative;
-  top: 19px;
+  top: 15px;
   font-weight: 600;
+}
+
+#mainNav ul.list-inline li:first-child {
+  margin-bottom: 5px;
 }
 
 #mainNav .navbar-nav .nav-item {
@@ -364,6 +368,9 @@ header {
   #mainNav .navbar-brand {
     margin-right: 15px;
   }
+  #mainNav .navbar-brand img {
+    width: 100px;
+  }
   #mainNav .navbar-nav .nav-item .nav-link {
     padding: 0.4em 1.3em !important;
   }
@@ -396,6 +403,10 @@ header {
   font-size: 1.5em;
   font-weight: 700;
   color: #6a675f;
+}
+
+.menu-modal#menuModal .modal-content .modal-body a.menu_logo img {
+  width: 70px;
 }
 
 .menu-modal#menuModal .modal-content .modal-body a.nav-link {
@@ -563,7 +574,7 @@ section#masthead .owl-carousel .owl-dots .owl-dot.active span {
 
 @media (max-width: 575px) {
   .inner_pages-masthead h1 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
   }
 }
 
