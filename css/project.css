@@ -99,7 +99,7 @@ section h1.wt-section-title {
 }
 
 section .wt-section-title-other {
-  font-size: 34px;
+  font-size: 32px;
   line-height: 1.18;
   font-weight: 400;
   width: 100%;
@@ -275,7 +275,7 @@ img::-moz-selection {
     font-size: 18px;
   }
   .seo-text h2 {
-    font-size: 1.5rem;
+    font-size: 26px;
   }
 }
 
