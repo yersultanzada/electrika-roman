@@ -153,6 +153,12 @@
 				<p class="wt-section-text">
 					Команда из 10 мастеров-электриков обладает комплексными знаниями в этой сфере и использует только проверенные материалы. Поэтому результатом наших услуг всегда являются полная безопасность и бесперебойная работа ЛЭП.
 				</p>
+				<div class="row">
+					<div class="col-lg-6 mx-auto my-4">
+						<iframe data-loader="youtube" data-src="Lf3LC9SJYoM" width="100%" height="300" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						<p class="wt-section-small-text text-center mt-2">Строительство ВЛ 10 кВ в Алматы</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -378,12 +384,17 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyloadxt/1.1.0/jquery.lazyloadxt.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js" async></script>
 <!-- Plugin JavaScript -->
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazy/1.7.1/jquery.lazy.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazy/1.7.1/plugins/jquery.lazy.youtube.min.js"></script>
 <script src="vendor/jquery/mask.js"></script>
 <script src="vendor/jquery-easing/jquery.easing.min.js" async></script>
 
 <!-- Custom scripts for this project -->
 <script src="js/video.min.js" async></script>
 <script src="js/project.min.js" async></script>
+<script>
+    $("iframe[data-src]").Lazy();
+</script>
 <script src="mail/js/mail.js" async></script>
 </body>
 

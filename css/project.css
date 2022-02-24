@@ -1,6 +1,6 @@
 /*!
  * Start Bootstrap - Agency v5.0.2 (https://startbootstrap.com/template-overviews/agency)
- * Copyright 2013-2021 Start Bootstrap
+ * Copyright 2013-2022 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-agency/blob/master/LICENSE)
  */
 
@@ -81,7 +81,6 @@ section div.wt-section-heroTitle {
   line-height: 1.22;
   font-weight: 400;
   width: 100%;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-style: normal;
   letter-spacing: -.021em;
@@ -92,7 +91,6 @@ section h1.wt-section-title {
   line-height: 1.18;
   font-weight: 400;
   width: 100%;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-style: normal;
   letter-spacing: -.021em;
@@ -103,7 +101,6 @@ section .wt-section-title-other {
   line-height: 1.18;
   font-weight: 400;
   width: 100%;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-style: normal;
   letter-spacing: -.021em;
@@ -114,7 +111,6 @@ section p.wt-section-subtitle {
   line-height: 1.5;
   font-weight: 400;
   width: 100%;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-style: normal;
   letter-spacing: 0;
@@ -125,7 +121,6 @@ section h3.wt-section-heading {
   line-height: 1.31;
   font-weight: 400;
   width: 100%;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-style: normal;
   letter-spacing: 0;
@@ -136,7 +131,6 @@ section p.wt-section-subheading {
   line-height: 1.36;
   font-weight: 400;
   width: 100%;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-style: normal;
   letter-spacing: 0;
@@ -146,7 +140,6 @@ section p.wt-section-text {
   font-size: 18px;
   line-height: 1.56;
   width: 100%;
-  -webkit-text-decoration: none;
   text-decoration: none;
   font-style: normal;
   letter-spacing: 0;
@@ -233,18 +226,9 @@ section p.wt-section-small-text {
   box-shadow: 0 0 0 0.2rem rgba(254, 209, 55, 0.5) !important;
 }
 
-::-moz-selection {
-  background: #6a675f;
-  text-shadow: none;
-}
-
 ::selection {
   background: #0571ba;
   text-shadow: none;
-}
-
-img::-moz-selection {
-  background: transparent;
 }
 
 img::selection {
@@ -295,7 +279,6 @@ img::-moz-selection {
 }
 
 header {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 999;
