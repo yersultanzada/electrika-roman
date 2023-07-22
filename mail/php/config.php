@@ -15,15 +15,15 @@
 	// *** SMTP *** //
 
 		require_once($_SERVER['DOCUMENT_ROOT'] . '/mail/phpmailer/smtp.php');
-		const HOST = 'smtp.gmail.com';
-		const LOGIN = 'webtech19studio@gmail.com';
+		const HOST = 'smtp.yandex.ru';
+		const LOGIN = 'webtech19studio@yandex.kz';
 		const PASS = 'web_tech2121';
 		const PORT = '465';
 
 	// *** /SMTP *** //
 
   // Почта с которой будет приходить письмо
-	const SENDER = 'webtech19studio@gmail.com';
+	const SENDER = 'webtech19studio@yandex.kz';
 	
 	// Почта на которую будет приходить письмо
 	const CATCHER = 'e.kizmeter@yandex.kz';

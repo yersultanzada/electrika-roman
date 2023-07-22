@@ -16,7 +16,8 @@
             $msgs['tel'] = MSGSTELERROR;
         } else {
             if (!empty($_POST['tel'])) {
-                $tel = "<b>Телефон: </b> " . trim(strip_tags($_POST['tel'])) . "<br>";
+                $tel = "<b>Телефон: </b><a href='tel:" . trim(strip_tags($_POST['tel'])) . "'>" . trim(strip_tags($_POST['tel'])) . "</a><br>";
+
             }
         }
     }
