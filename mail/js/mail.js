@@ -1,69 +1,93 @@
-(function ($) {
-	$(".contact-form").submit(function (event) {
-		event.preventDefault();
-		let form = $('#' + $(this).attr('id'))[0];
-		// Сохраняем в переменную класс формы
-		let formClass = $(this).attr('class');
+$(function() {
+    $(".contact-form").submit(function (event) {
+        event.preventDefault();
 
-		// Сохраняем в переменные дивы, в которые будем выводить текст ошибки
-		let inpNameError = $(this).find('.contact-form__error_name');
-		let inpTelError = $(this).find('.contact-form__error_tel');
+        // Ссылка, которую получили на этапе публикации приложения
+        let appLink = "https://script.google.com/macros/s/AKfycbxTKrX5V6S_5lU6d4iebBTdIVQDpaHSZtheAwYEsh8NPNOGA2lll2XrfJPW2Rzgy-FR/exec";
 
-		// Сохраняем в переменную див, в который будем выводить сообщение формы
-		let formDescription = $(this).find('.contact-form__description');
+        // Сообщение при успешной отправке данных
+        let successRespond = 'Сообщение успешно отправлено.';
 
-		let fd = new FormData(form);
-		$(".contact-form i.fa-phone").css({
-			'display': 'none'
-		});
-		$("._preloader").css({
-			'display': 'inline-block'
-		});
-		$.ajax({
-			url: "/mail/php/mail.php",
-			type: "POST",
-			data: fd,
-			processData: false,
-			contentType: false,
-			success: function success(res) {
-				console.log(res);
-				let respond = $.parseJSON(res);
-				
-				if (respond.name) {
-					inpNameError.text(respond.name);
-				} else {
-					inpNameError.text('');
-				}
+        // Сообщение при ошибке в отправке данных
+        let errorRespond = 'Не удалось отправить сообщение.';
 
-				if (respond.tel) {
-					inpTelError.text(respond.tel);
-				} else {
-					inpTelError.text('');
-				}
+        // Id текущей формы
+        let form = $('#' + $(this).attr('id'))[0];
 
-				if (respond.attantion) {
-					formDescription.text(respond.attantion).css('color', '#e84a66').fadeIn();
-				} else {
-					formDescription.text('');
-				}
+        // h2 с ответом формы
+        let formRespond = $(this).find('.contact-form__description');
 
-				if (respond.success) {
-					$("._preloader").css({
-						'display': 'none'
-					});
-					$(".contact-form i.fa-phone").css({
-						'display': 'inline-block'
-					});
-					formDescription.text(respond.success).fadeIn();
-					$('.'+formClass).find('input').val('');
-					setTimeout(() => {
-						formDescription.fadeOut("fast");
-					}, 2000);
-					setTimeout(() => {
-						formDescription.text('');
-					}, 4000);
-				}
-			},
-		});
-	});
+        // Блок прелоадера
+        let preloader = $(this).find('.contact-form__preloader');
+
+        // Кнопка отправки формы
+        let submitButton = $(this).find('.contact-form__button');
+
+        // FormData
+        let fd = new FormData(form);
+
+        $.ajax({
+
+            url: appLink,
+            type: "POST",
+            data: fd,
+            processData: false,
+            contentType: false,
+            beforeSend: function(){
+
+                $(".contact-form i.fa-phone").css({
+                    'display': 'none'
+                });
+                $("._preloader").css({
+                    'display': 'inline-block'
+                });
+
+            },
+
+        }).done(function(res, textStatus, jqXHR) {
+
+            if(jqXHR.readyState === 4 && jqXHR.status === 200) {
+                $("._preloader").css({
+                    'display': 'none'
+                });
+                $(".contact-form i.fa-phone").css({
+                    'display': 'inline-block'
+                });
+                formRespond.html(successRespond).fadeIn();
+                setTimeout(() => {
+                    formRespond.fadeOut("fast");
+                }, 2000);
+                setTimeout(() => {
+                    formRespond.text('');
+                }, 4000);
+                // Очищаем поля формы
+                form.reset();
+
+
+            } else {
+                formRespond.html(errorRespond).css('color', '#c64b4b');
+                preloader.css('opacity', '0');
+                setTimeout( () => {
+                    formRespond.css({
+                        'display': 'none'
+                    });
+
+                    submitButton.prop('disabled', false);
+                }, 5000);
+
+                console.log('Гугл не ответил статусом 200');
+            }
+        }).fail(function(res, textStatus, jqXHR) {
+            preloader.css('opacity', '0');
+            formRespond.html('Не удалось отправить сообщение. Cвяжитесь с администратором сайта другим способом').css('color', '#c64b4b');
+            setTimeout( () => {
+                formRespond.css({
+                    'display': 'none'
+                });
+                submitButton.prop('disabled', false);
+            }, 5000);
+
+            console.log('Не удалось выполнить запрос по указанному в скрипте пути');
+        });
+    });
 }(jQuery));
