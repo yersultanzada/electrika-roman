@@ -128,6 +128,17 @@
                         <a href="ust-svetilnikov.html">Установка светильников</a>
                     </li>
                 </ul>
+                <div class="row">
+                    <div class="col-md-6 col-lg-4 mt-5">
+                        <iframe data-loader="youtube" data-src="Ele8a4nYneE" width="100%" height="210" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mt-5">
+                        <iframe data-loader="youtube" data-src="JBn05UM-F9A" width="100%" height="210" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mt-5">
+                        <iframe data-loader="youtube" data-src="gcbxX6GjwpY" width="100%" height="210" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -349,10 +360,14 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyloadxt/1.1.0/jquery.lazyloadxt.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js" async></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazy/1.7.1/jquery.lazy.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazy/1.7.1/plugins/jquery.lazy.youtube.min.js"></script>
 <!-- Plugin JavaScript -->
 <script src="vendor/jquery/mask.js"></script>
 <script src="vendor/jquery-easing/jquery.easing.min.js" async></script>
-
+<script>
+    $("iframe[data-src]").Lazy();
+</script>
 <!-- Custom scripts for this project -->
 <script src="js/video.min.js" async></script>
 <script src="js/project.min.js" async></script>

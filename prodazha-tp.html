@@ -16,6 +16,7 @@
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="vendor/blueimp-gallery/css/blueimp-gallery.min.css">
   <!-- Custom styles for this project -->
   <link href="css/video.min.css" rel="stylesheet">
   <link href="css/project.min.css" rel="stylesheet">
@@ -173,6 +174,28 @@
             <a href="topograficheskaya-siemka.html">Топосъемка, топографическая съемка</a>
           </li>
         </ul>
+		  <div id="links">
+            <h3 class="wt-section-heading mb-4">Галерея проектов</h3>
+            <div class="row">
+              <div class="col-md-6 col-lg-4 mb-4">
+                <a href="img/inner/gallery/prod-tp2.jpg" title="Комплектная трансформаторная подстанция сельского типа. Мощностью 250кВА. Воздушный ввод">
+                  <img data-src="img/inner/gallery/prod-tp2.jpg" class="w-100" alt="продажа тп">
+                </a>
+                <div class="gallery-desc">Комплектная трансформаторная подстанция сельского типа. Мощностью 250кВА. Воздушный ввод. Также имеется возможность осуществить конструктив с кабельным вводом.</div>
+              </div>
+              <div class="col-md-6 col-lg-4 mb-4">
+                <a href="img/inner/gallery/prod-tp1.jpg" title="Комплектная трансформаторная подстанция сельского типа. Мощностью 250кВА. Воздушный ввод">
+                  <img data-src="img/inner/gallery/prod-tp1.jpg" class="w-100" alt="продажа тп">
+                </a>
+                <div class="gallery-desc">Комплектная трансформаторная подстанция сельского типа. Мощностью 250кВА. Воздушный ввод. Также имеется возможность осуществить конструктив с кабельным вводом.</div>
+              </div>
+            </div>
+          </div>
+        <div class="row">
+          <div class="col-md-6 col-lg-4 mt-5">
+            <iframe data-loader="youtube" data-src="F60EGFAgFAA" width="100%" height="210" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -393,14 +416,42 @@
     <a class="video-widget__button js-scroll-trigger" href="#callToAction">Оставить заявку</a>
   </div>
 </div>
+	<!-- Blueimp gallery -->
+<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls text-white">
+	<div class="slides"></div>
+	<h3 class="title"></h3>
+	<a class="prev">‹</a>
+	<a class="next">›</a>
+	<a class="close">×</a>
+	<a class="play-pause"></a>
+	<ol class="indicator"></ol>
+</div>
 <!-- Bootstrap core JavaScript -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyloadxt/1.1.0/jquery.lazyloadxt.min.js"></script>
 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js" async></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazy/1.7.1/jquery.lazy.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazy/1.7.1/plugins/jquery.lazy.youtube.min.js"></script>
 <!-- Plugin JavaScript -->
 <script src="vendor/jquery/mask.js"></script>
+<script src="vendor/blueimp-gallery/js/blueimp-gallery.min.js" async></script>
 <script src="vendor/jquery-easing/jquery.easing.min.js" async></script>
 
+<!-- Custom scripts for this project -->
+<script src="js/video.min.js" async></script>
+<script src="js/project.min.js" async></script>
+<script>
+    $("iframe[data-src]").Lazy();
+
+    document.getElementById('links').onclick = function (event) {
+        event = event || window.event;
+        var target = event.target || event.srcElement,
+            link = target.src ? target.parentNode : target,
+            options = {index: link, event: event},
+            links = this.getElementsByTagName('a');
+        blueimp.Gallery(links, options);
+    };
+</script>
 <!-- Custom scripts for this project -->
 <script src="js/video.min.js" async></script>
 <script src="js/project.min.js" async></script>
